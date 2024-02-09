@@ -1649,6 +1649,12 @@ gap:20px;
   grid-template-columns: 1fr 4fr;
   justify-items: center;
 }
+.servise_text_container {
+  width: 95vw;
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+  justify-items: center;
+}
 
 .aboutus_text_slash {
   display: grid;
@@ -1658,6 +1664,7 @@ gap:20px;
   justify-items: center;
   padding:22px 0 0 0 ;
 }
+
 .aboutus_blur_heading {
   display: grid;
   justify-items: flex-start;

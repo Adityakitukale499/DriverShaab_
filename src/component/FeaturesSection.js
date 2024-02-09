@@ -5,6 +5,7 @@ import "../Assets/css/style.css";
 import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
 // import '../Assets/css/revolution-slider.css'
+import line from "../Assets/images/line.png";
 
 const FeatureSection = () => {
   const servicesData = [
@@ -47,21 +48,17 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section className="services-section-one">
-      <Container>
-        <Box className="content-container">
-          <div className="sec-title">
-            <div className="inner-title-box">
-              <Typography variant="h2">
-                PROVIDING AMAZING FEATURES TO OUR CLIENTS
-              </Typography>
-              <Typography variant="h4" className="rotate-title">
-                SERVICES
-              </Typography>
+    <div className="aboutus_container" >
+        <div className="servise_text_container">
+
+          <div className="aboutus_text_slash">
+            <div className="aboutus_blur_heading">About us</div>
+            <div className="line_img">
+              <img src={line} alt="lineimg" style={{ height: "52px" }} />
             </div>
           </div>
 
-          <div className="row clearfix">
+          <div className="">
             {servicesData.map((service, index) => (
               <div
                 key={index}
@@ -82,9 +79,50 @@ const FeatureSection = () => {
               </div>
             ))}
           </div>
-        </Box>
-      </Container>
-    </section>
+
+
+        </div>
+
+
+
+      </div>
+    // <section className="services-section-one">
+ 
+    //     <Box  sx={{mx:'15%'}}>
+    //       <div className="sec-title">
+    //         <div className="inner-title-box">
+    //           <Typography variant="h2">
+    //             PROVIDING AMAZING FEATURES TO OUR CLIENTS
+    //           </Typography>
+    //           <Typography variant="h4" className="rotate-title">
+    //             SERVICES
+    //           </Typography>
+    //         </div>
+    //       </div>
+
+          // <div className="row clearfix">
+          //   {servicesData.map((service, index) => (
+          //     <div
+          //       key={index}
+          //       className="services-block col-md-4 col-sm-6 col-xs-12"
+          //     >
+          //       <div className="inner-box">
+          //         <div className="upper-box">
+          //           <div className="icon-box">{service.icon}</div>
+          //           <span className="number">{service.number}</span>
+          //         </div>
+          //         <div className="lower-box">
+          //           <Typography variant="h3">
+          //             <a href="services.html">{service.title}</a>
+          //           </Typography>
+          //           <div className="text">{service.text}</div>
+          //         </div>
+          //       </div>
+          //     </div>
+          //   ))}
+          // </div>
+    //     </Box>
+    // </section>
   );
 };
 
