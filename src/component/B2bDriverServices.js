@@ -20,7 +20,10 @@ const B2bDriverServices = () => {
 
       <div className="Driver_srvices_items">
         <div className="driver_services_img">
-          <img src={service_img1} alt="img" style={{width:"399px",height:"193px"}} />
+          <img src={service_img1} alt="img" 
+          // style={{width:"399px",height:"193px"}} 
+
+          />
         </div>
         <div  className="driver_services_text">
           <div className="driver_services_heading">Pickup & Drop Service</div>
@@ -42,7 +45,7 @@ const B2bDriverServices = () => {
       <div className="Driver_srvices_items">
         <div className="driver_services_img" style={{}}>    
         <img src={service_img3} alt="img" 
-        style={{width:"399px",height:"193px"}} 
+        // style={{width:"399px",height:"193px"}} 
 
         /></div>
         <div className="driver_services_text">

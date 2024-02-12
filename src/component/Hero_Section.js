@@ -1,12 +1,21 @@
 import React from "react";
 import driver from "../Assets/driver.png";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography,useMediaQuery} from "@mui/material";
 import { Hero_Section_Button } from "./Hero_Section_Button";
+import { useNavigate } from "react-router-dom";
 
 const Hero_Section = () => {
-  const handleScheduleDemo = () => {};
-  const handleJoinAsPartener = () => {};
 
+  const navigate = useNavigate()
+
+  const Navigate_ScheduleDemo = () => {
+    navigate("/scheduledemo")
+  };
+
+  const Navigate_JoinAsDriver = () => {
+    navigate("/joinasdriver")
+  };
+ 
   return (
     <div className="sec-hero">
       <div className="sec-hero-text-container-text">
@@ -19,16 +28,19 @@ const Hero_Section = () => {
         </p>
       </div>
       <div className="sec-hero-btn-div">
+
         <Hero_Section_Button
           text="Schedule Demo (B2B)"
           backgroundColor="#FB561E"
           variant="filled"
           color="#FFFFFF"
+          onClick={Navigate_ScheduleDemo}
         />
         <Hero_Section_Button
           text="Join as Driver Partner"
           color="#FB561E"
           border="3px solid #FB561E"
+          onClick={Navigate_JoinAsDriver}
         />
       </div>
       {/* </div> */}

@@ -10,7 +10,7 @@ const TeamSection = () => {
     <section className="our-team-section style-two">
       <div className="auto-container">
         <div className="sec-title text-center">
-        <div className="intro-paragraph" style={{ width: '1075px', height: '90px', margin: '20px auto', fontFamily: 'Inter', fontSize: '20px', fontWeight: 400, lineHeight: '30px', letterSpacing: '0em', textAlign: 'center' }}>
+        <div className="intro-paragraph" style={{height:"fitContent", width: 'auto', margin: '20px auto', fontFamily: 'Inter', fontSize: '20px', fontWeight: 400, lineHeight: '30px', letterSpacing: '0em', textAlign: 'center' }}>
   <h1>Elevating Journeys for 5 Years</h1>
   <p>Drivershaab has been dedicated to providing unparalleled driver services to individuals and businesses across 25 cities, covering an impressive distance of over 5000 km. Our story is one of commitment, reliability, and the unwavering pursuit of excellence.</p>
 </div>

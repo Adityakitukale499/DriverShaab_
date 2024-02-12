@@ -9,14 +9,10 @@ const Businesses = () => {
   return (
     <div
       style={{
-        display: "flex",
-        flexDirection: "column",
-        rowGap: "50px",
-        marginTop: "150",
+        marginTop: "100px",
       }}
     >
       <div>
-        {" "}
         <Video />
       </div>
       <div>

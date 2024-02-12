@@ -5,7 +5,7 @@ import ContactSection from "../component/ContactSection";
 
 const ContactUs = () => {
   return (
-    <div>
+    <div style={{paddingTop:"30px"}}>
       <ContactSection />
       <AppSection />
       <Footer />

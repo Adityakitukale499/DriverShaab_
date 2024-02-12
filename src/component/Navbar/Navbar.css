@@ -151,23 +151,28 @@
 
 
 
-.app-bar {
-    background-color: #121212; /* Custom background color */
+/* .app-bar {
+    background-color: #121212; 
+    /* Custom background color 
   }
   
   .menu-icon {
-    margin-right: 10px; /* Add margin to the menu icon */
+    margin-right: 10px; 
+    /* Add margin to the menu icon 
   }
   
   .app-title {
-    flex-grow: 1; /* Grow to fill the available space */
+    flex-grow: 1; 
+    /* Grow to fill the available space 
   }
   
   .drawer {
-    width: 240px; /* Set drawer width */
+    width: 240px; 
+    /* Set drawer width 
   }
   
   .breadcrumbs {
-    padding: 10px; /* Add padding to breadcrumbs */
+    padding: 10px; 
+    /* Add padding to breadcrumbs 
   }
-  
+   */
