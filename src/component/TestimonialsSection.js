@@ -6,7 +6,8 @@ import "../Assets/css/color.css";
 
 const TestimonialsSection = () => {
   return (
-    <section className="testimonials-section">
+    <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+    <section className="testimonials-section" style={{maxWidth:"1200px"}}>
       <div className="auto-container">
         <div className="sec-title text-center">
           <h1>Customer Testimonials</h1>
@@ -40,6 +41,7 @@ const TestimonialsSection = () => {
         </Grid>
       </div>
     </section>
+    </div>
   );
 };
 

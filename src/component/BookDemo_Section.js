@@ -8,6 +8,7 @@ import "../Assets/css/responsive.css";
 const BookDemo_Section = () => {
   return (
     <>
+  {/* <div style={{display:"flex", alignItems:"center", justifyContent:"center",width:"100vw"}}> */}
       <section className="cta-two">
         <div className="auto-container">
           <h4>
@@ -20,6 +21,7 @@ const BookDemo_Section = () => {
           </div>
         </div>
       </section>
+      {/* </div> */}
     </>
   );
 };

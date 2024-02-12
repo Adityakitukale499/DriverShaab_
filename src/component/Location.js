@@ -3,6 +3,7 @@ import React from 'react'
 
 const Location = () => {
   return (
+    // <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
     <Box sx={{
       backgroundImage: "url(" + "div.section-location.png" + ")",
       backgroundPosition: 'center',
@@ -11,7 +12,8 @@ const Location = () => {
       display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      p: 4
+      p: 4,
+    
     }}>
       <Grid container>
         <Grid item lg={6} xs={12} sx={{ p: 5 ,px:10}}>
@@ -32,6 +34,7 @@ const Location = () => {
         </Grid>
       </Grid>
     </Box>
+    // </div>
   )
 }
 

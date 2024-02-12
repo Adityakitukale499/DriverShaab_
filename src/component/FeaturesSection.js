@@ -48,7 +48,8 @@ const FeatureSection = () => {
   ];
 
   return (
-    <section className="services-section-one">
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw"}}>
+    <section className="services-section-one" style={{maxWidth:"1200px"}} >
       <Container>
         <Box className="content-container">
           <div className="sec-title">
@@ -86,6 +87,7 @@ const FeatureSection = () => {
         </Box>
       </Container>
     </section>
+    </div>
   );
 };
 

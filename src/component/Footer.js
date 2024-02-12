@@ -6,9 +6,11 @@ import "../Assets/css/color.css";
 
 const Footer = () => {
   return (
-    <div style={{ marginTop: "250px" }}>
+   
+    <div style={{ marginTop: "250px",width:"100vw", display:"flex",alignItems:"center", justifyContent:"center" }}>
+    <div style={{maxWidth:"1200px"}}>
       {/* Footer Section */}
-      <footer className="customfooter">
+      <footer className="customfooter" >
         <div className="auto-container">
           {/* Widgets Section */}
           <div className="widgets-section">
@@ -130,6 +132,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

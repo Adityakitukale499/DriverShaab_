@@ -26,7 +26,8 @@ const JoinAsDriver_Section = () => {
 
   return (
     <>
-      <div className="joinasdriver_container">
+     <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+      <div className="joinasdriver_container" style={{maxWidth:"1200px"}}>
         <div className="joinasdriver_img">
           <img
             src={joinDriver}
@@ -128,6 +129,7 @@ const JoinAsDriver_Section = () => {
             </form>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

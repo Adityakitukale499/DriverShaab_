@@ -7,7 +7,8 @@ import '../Assets/css/color.css'
 
 const TeamSection = () => {
   return (
-    <section className="our-team-section style-two">
+    <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+    <section className="our-team-section style-two" max-width="1200px">
       <div className="auto-container">
         <div className="sec-title text-center">
         <div className="intro-paragraph" style={{height:"fitContent", width: 'auto', margin: '20px auto', fontFamily: 'Inter', fontSize: '20px', fontWeight: 400, lineHeight: '30px', letterSpacing: '0em', textAlign: 'center' }}>
@@ -51,6 +52,7 @@ const TeamSection = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

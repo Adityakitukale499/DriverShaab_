@@ -9,7 +9,8 @@ import car from "../../Assets/images/car.png"
 const AboutSection = () => {
   return (
     <>
-      <div className="aboutus_container">
+    <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+      <div className="aboutus_container" style={{maxWidth:"1200px"}}>
         <div className="aboutus_text_container">
 
           <div className="aboutus_text_slash">
@@ -60,6 +61,7 @@ const AboutSection = () => {
         </div>
 
 
+      </div>
       </div>
     </>
   );

@@ -6,7 +6,8 @@ import service_img3 from "../Assets/images/service_img3.png"
 
 const B2bDriverServices = () => {
   return (
-    <div className="driver_services_container">
+    <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+    <div className="driver_services_container" style={{maxWidth:"1200px"}}>
       <div className="Driver_srvices_item1">
         <div className="driver_services_Main_heading">B2b driver services</div>
         <div className="driver_services_subheading">
@@ -53,6 +54,7 @@ const B2bDriverServices = () => {
           <div className="driver_services_description"> Drivershaab operates in all the major cities of India and works with 50,000+ well-trained professional drivers. Driveshaab is committed to help our driver partners become micro-entrepreneurs and increase their income. also strives to improve quality of life for its driver partners through training in etiquette, hygiene, service quality etc.</div>
         </div>
       </div>
+    </div>
     </div>
   );
 };

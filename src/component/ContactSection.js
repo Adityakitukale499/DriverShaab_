@@ -208,7 +208,8 @@ const ContactSection = () => {
   return (
     <>
       {/* Page Title */}
-      <section className="page-title">
+      <div style={{width:"100vw", display:"flex",alignItems:"center",flexDirection:"column", justifyContent:"center", }}>
+      <section className="page-title" style={{maxWidth:"1200px"}}>
         <div className="auto-container">
           <h1>CONTACT US</h1>
           <div className="bread-crumb-outer">
@@ -327,6 +328,7 @@ const ContactSection = () => {
         </div>
       </div>
       {/* End Contact Section */}
+      </div>
     </>
   );
 };

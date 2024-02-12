@@ -8,8 +8,10 @@ import '../Assets/css/responsive.css'
 
 const AppSection = () => {
   const isDesktop = useMediaQuery('(min-width:600px)');
+
   return (
     <>
+       <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
       {/* <Grid container>
         <Grid item lg={6} xs={12} sx={{display:'flex',flexDirection:'column', justifyContent:'center', p:5}}>
           <Typography sx={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '28px', lineHeight: '42px' }}>DRIVERSHAAB APP IS LIVE, DOWNLOAD IT NOW!</Typography>
@@ -37,8 +39,8 @@ const AppSection = () => {
       </Grid> */}
 
 
-      <Grid container >
-        <Grid item lg={6} xs={12} sx={{display:'flex',flexDirection:'column', p:4 ,gap:3}}>
+      <Grid container style={{maxWidth:"1200px"}}>
+        <Grid item lg={6} xs={12} sx={{display:'flex',flexDirection:'column',alignContent:'center', justifyContent:'center',textAlign:'center' ,p:4 ,gap:3}}>
 
           <Typography sx={{ fontFamily: 'Inter', fontWeight: 500, fontSize: '28px', lineHeight: '42px' }}>DRIVERSHAAB APP IS LIVE, DOWNLOAD IT NOW!</Typography>
           
@@ -46,7 +48,7 @@ const AppSection = () => {
 
           <Typography sx={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '18px', lineHeight: '27px',my:2 }}>Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos come dere carnem. Search for solum oculi eorum defunctis cerebro.</Typography>
 
-          <Grid item lg={9} xs={11} sx={{ display: 'flex',flexWrap:'wrap', gap:2, color:'#FB561E', alignItems:'center', }}>
+          <Grid item lg={12} xs={11} sx={{ display: 'flex',flexDirection:"row", gap:2, color:'#FB561E', alignItems:'center',justifyContent:'center',marginX:'auto' }}>
             <Box sx={{ borderRadius: 13, px: 3,py:1, border: '2px solid #FB561E', display: 'flex', gap: 2, color:'#FB561E', alignItems:'center', cursor:'pointer' }}>
               <AdbIcon sx={{ height: '51px',fontSize:55 }} /> <Box>
                 <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
@@ -73,7 +75,7 @@ const AppSection = () => {
         
 
       </Grid>
-
+</div>
     </>
   );
 };

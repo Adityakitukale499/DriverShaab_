@@ -29,7 +29,8 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="faq-section">
+    <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+    <section className="faq-section" style={{maxWidth:"1200px"}}>
       <div className="auto-container">
         <div className="text-center mb-4">
           <h1>Frequently Asked Questions</h1>
@@ -64,6 +65,7 @@ const FaqSection = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 

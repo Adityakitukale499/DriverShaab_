@@ -10,7 +10,8 @@ import "../Assets/css/responsive.css";
 
 const Service_Section = () => {
   return (
-    <section className="services-section-one">
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw"}}>
+    <section className="services-section-one"  style={{maxWidth:"1200px"}}>
       <Container>
         <div className="content-container">
           <div className="sec-title">
@@ -24,6 +25,7 @@ const Service_Section = () => {
               </p>
             </div>
           </div>
+          {/* <div className="sec-service-card-container"> */}
           <div className="sec-service-card-container">
             <ServiceSection_card
               src={Service_Section1}
@@ -47,6 +49,7 @@ const Service_Section = () => {
         </div>
       </Container>
     </section>
+    </div>
   );
 };
 
