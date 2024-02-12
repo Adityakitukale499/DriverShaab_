@@ -15,6 +15,7 @@ export const Hero_Section_Button = ({
     <Button
       className="sec-hero-btn"
       sx={{
+        zIndex:-1,
         border: border,
         color: color,
         gap: "10px",
@@ -24,22 +25,19 @@ export const Hero_Section_Button = ({
         fontFamily: "Inter",
         fontSize: "22px",
         px: isDesktop ? "20px" : "10px", //10 //20
-        py : isDesktop ? "15px":"10px"
-        // px: 3,
-        // py: 1,
+        py : isDesktop ? "15px":"10px",
+        fontFamily: "Inter",
+        fontWeight: 500,
+        fontSize: isDesktop ? "24px" : "14px",
+        lineHeight: isDesktop ? "29.05px" : "16.94px",
+        '&:hover':{
+          color:'#fff',
+          backgroundColor:'#FB461E'
+        },
       }}
-      onClick={onClick}
+      // onClick={onClick}
     >
-      <Typography
-        sx={{
-          fontFamily: "Inter",
-          fontWeight: 500,
-          fontSize: isDesktop ? "24px" : "14px",
-          lineHeight: isDesktop ? "29.05px" : "16.94px",
-        }}
-      >
         {text}
-      </Typography>
     </Button>
   );
 };

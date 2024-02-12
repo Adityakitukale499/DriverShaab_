@@ -48,20 +48,20 @@ const AppSection = () => {
 
             <Typography sx={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '18px', lineHeight: '27px', my: 2 }}>Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos come dere carnem. Search for solum oculi eorum defunctis cerebro.</Typography>
 
-            <Grid item lg={12} xs={11} sx={{ display: 'flex', flexDirection: "row", gap: 2, color: '#FB561E', alignItems: 'center', justifyContent: 'center', marginX: 'auto' }}>
+            <Box sx={{ display: 'flex', flexDirection: "row", gap: 2, color: '#FB561E', alignItems: 'start', justifyContent: 'start', marginX: 'auto' }}>
               <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
-                <AdbIcon sx={{ height: '51px', fontSize: 55 }} /> <Box>
+                <AdbIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Apple IOS</Typography>
                 </Box>
               </Box>
               <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
-                <AdbIcon sx={{ height: '51px', fontSize: 55 }} /> <Box>
+                <AdbIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Apple IOS</Typography>
                 </Box>
               </Box>
-            </Grid>
+            </Box>
 
 
           </Grid>

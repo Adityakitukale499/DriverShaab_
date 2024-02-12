@@ -1278,14 +1278,14 @@ img {
   height: 758px;
   justify-items: center;
   align-items: center;
-  grid-template-rows: 2fr 2.5fr;
+  grid-template-rows: 2.5fr 1.5fr;
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url(./images/driver.png);
 }
 .sec-hero-text-container-text {
   display: grid;
-  grid-template-rows: 3fr 2fr;
+  grid-template-rows: 3fr 1fr;
   justify-content: center;
   align-items: center;
   /* gap: 30px; */
@@ -1532,6 +1532,7 @@ img {
   place-content: center;
   width: 100vw;
   height: 478;
+  position: relative;
 
 }
 .aboutus_text_container {
@@ -1597,9 +1598,10 @@ img {
 }
 
 .aboutus_car_img {
-  display: grid;
+  display: flex;
   align-items: center;
-  width: auto;
+  /* width: auto; */
+  position: relative;
 }
 @media screen and (max-width: 812px) {
   /* .aboutus_container {

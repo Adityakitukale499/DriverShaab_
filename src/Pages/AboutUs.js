@@ -10,6 +10,7 @@ const AboutUs = () => {
       <TeamSection />
       <Location />
       <AppSection />
+      <br />
       <Footer />
     </div>
   );

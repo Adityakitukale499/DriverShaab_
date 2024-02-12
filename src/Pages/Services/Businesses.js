@@ -5,6 +5,7 @@ import Schedule_Demo from "../../component/Schudule_Demo/Schedule_Demo";
 import AppSection from "../../component/AppSection";
 import Footer from "../../component/Footer";
 import SchuduleDemoForm from "../../component/Schudule_Demo/SchuduleDemoForm";
+import { Grid } from "@mui/material";
 const Businesses = () => {
   return (
     <div
@@ -19,6 +20,8 @@ const Businesses = () => {
         {" "}
         <B2bDriverServices />
       </div>
+      
+     
       <div>
         {" "}
         <SchuduleDemoForm />
@@ -27,6 +30,7 @@ const Businesses = () => {
         {" "}
         <AppSection />
       </div>
+      <br />
       <div>
         {" "}
         <Footer />
