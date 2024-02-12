@@ -10,7 +10,7 @@ const AboutSection = () => {
   return (
     <>
     <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
-      <div className="aboutus_container" style={{maxWidth:"1200px"}}>
+      <div className="aboutus_container" style={{width:"100vw",maxWidth:"1500px"}}>
         <div className="aboutus_text_container">
 
           <div className="aboutus_text_slash">

@@ -17,10 +17,7 @@ const Hero_Section = () => {
   };
  
   return (
-    // <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
-    <div className="sec-hero" 
-    // style={{maxWidth:"1200px"}}
-    >
+    <div className="sec-hero"  >
       <div className="sec-hero-text-container-text">
         <h1 className="sec-hero-heading">India's Largest Driver Service</h1>
 
@@ -46,9 +43,7 @@ const Hero_Section = () => {
           onClick={Navigate_JoinAsDriver}
         />
       </div>
-      {/* </div> */}
     </div>
-    // </div>
   );
 };
 

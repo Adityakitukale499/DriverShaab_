@@ -15,7 +15,7 @@ const Location = () => {
       p: 4,
     
     }}>
-      <Grid container>
+      <Grid container sx={{maxWidth:'1300px'}}>
         <Grid item lg={6} xs={12} sx={{ p: 5 ,px:10}}>
 
           <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 700, fontSize: '36px', lineHeight: '42px', color: '#fff'}}>We Have Now <span style={{ color: '#FB561E' }}>20+</span> Locations</Typography>

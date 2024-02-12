@@ -8,7 +8,8 @@ const Video = () => {
     flexDirection: "column",
     justifyContent: "center",
     margin: "auto",
-    maxWidth:"1200px"
+    maxWidth:"1100px",
+    marginBottom:'50px'
     }}>
       <div
         style={{

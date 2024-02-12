@@ -1,16 +1,15 @@
-import React from "react";
+import React from 'react'
 import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
 import "../Assets/css/style.css";
 import "../Assets/css/color.css";
+import { Box } from '@mui/material';
 
 const Footer = () => {
   return (
-   
-    <div style={{ marginTop: "250px",width:"100vw", display:"flex",alignItems:"center", justifyContent:"center" }}>
-    <div style={{maxWidth:"1200px"}}>
-      {/* Footer Section */}
-      <footer className="customfooter" >
+    <>
+    <Box sx={{bgcolor:'#212121', pt:2.5}}>
+    <footer className="customfooter" >
         <div className="auto-container">
           {/* Widgets Section */}
           <div className="widgets-section">
@@ -107,7 +106,9 @@ const Footer = () => {
           *{/* Footer Bottom */}
         </div>
       </footer>
-      <div className="footer-bottom">
+    </Box>
+    
+    <div className="footer-bottom">
         <div className="auto-container">
           <div className="wrapper-box">
             <div className="copyright">
@@ -132,9 +133,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </div>
-    </div>
-  );
-};
+    </>
+  )
+}
 
-export default Footer;
+export default Footer

@@ -10,23 +10,23 @@ import "../Assets/css/responsive.css";
 
 const Service_Section = () => {
   return (
-    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw"}}>
-    <section className="services-section-one"  style={{maxWidth:"1200px"}}>
-      <Container>
-        <div className="content-container">
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw", backgroundColor:'#f1f1f1'}}>
+    <section className="services-section-one"  style={{maxWidth:"1200px", backgroundColor:'#f1f1f1'}}>
+      <Container sx={{bgcolor:"#f1f1f1"}}>
+        <div className="content-container" style={{backgroundColor:'#f1f1f1'}}>
           <div className="sec-title">
             <div className="inner-title-box">
              
-              <p className="rotate-title">
-                SERVICES
+              <p className="rotate-title" style={{color:'#ffffff'}}>
+              Services
               </p>
-              <p className="sec-service-main-heading">
+              <p className="sec-service-main-heading" style={{backgroundColor:'#f1f1f1'}}>
                 OUR OFERINGS
               </p>
             </div>
           </div>
           {/* <div className="sec-service-card-container"> */}
-          <div className="sec-service-card-container">
+          <div className="sec-service-card-container" >
             <ServiceSection_card
               src={Service_Section1}
               alt="OurOffering_img2"

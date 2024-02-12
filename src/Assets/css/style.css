@@ -1382,7 +1382,7 @@ img {
   height: 213px;
   /* max-width: 1200px; */
   width: 100vw;
-  background-color: #d6d1d0;
+  /* background-color: #d6d1d0; */
   
 }
 @media screen and (max-width: 550px) {

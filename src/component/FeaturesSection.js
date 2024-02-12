@@ -48,22 +48,22 @@ const FeatureSection = () => {
   ];
 
   return (
-    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw"}}>
-    <section className="services-section-one" style={{maxWidth:"1200px"}} >
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw", backgroundColor:'#f1f1f1'}}>
+    <section className="services-section-one" style={{backgroundColor:'#f1f1f1'}} >
       <Container>
-        <Box className="content-container">
+        <Box className="content-container" sx={{backgroundColor:'#f1f1f1'}}>
           <div className="sec-title">
             <div className="inner-title-box">
-              <Typography variant="h2">
+              <Typography variant="h2" >
                 PROVIDING AMAZING FEATURES TO OUR CLIENTS
               </Typography>
-              <Typography variant="h4" className="rotate-text">
-                SERVICES
+              <Typography variant="h4"className="rotate-text" style={{color:'#ffffff'}} >
+                FEATURES
               </Typography>
             </div>
           </div>
 
-          <div className="row clearfix">
+          <div className="row clearfix" style={{backgroundColor:'#f1f1f1'}}>
             {servicesData.map((service, index) => (
               <div
                 key={index}
