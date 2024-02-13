@@ -13,6 +13,7 @@ import {
 import Navbar from "./component/Navbar/Navbar";
 import Careers from "./Pages/Careers";
 import './App.css'
+import SimpleSlider from "./component/Slider/Slider";
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
     <div>
       <div>
       <BrowserRouter>
+      {/* <SimpleSlider/> */}
       <Navbar/>
         <Routes>
           <Route exact path="/" element={<Home/>} />
@@ -31,8 +33,9 @@ const App = () => {
           <Route path="/joinasdriver" element={<JoinasDriver/>} />
           <Route path="/scheduledemo" element={<ScheduleDemo/>} />
         </Routes>
+           
         </BrowserRouter>
-      
+   
       </div>
     </div>
   );

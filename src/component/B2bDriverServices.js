@@ -3,7 +3,12 @@ import b2b1 from "../Assets/images/b2b1.png"
 import b2b2 from "../Assets/images/b2b2.png"
 import b2b3 from "../Assets/images/b2b3.png"
 import { Grid, Typography ,useMediaQuery} from "@mui/material";
+import SimpleSlider from "../component/Slider/Slider";
 
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
+// import React from "react";
+// import Slider from "react-slick";
 
 const B2bDriverServices = () => {
 
@@ -77,13 +82,14 @@ const B2bDriverServices = () => {
     }
   
 
-  return (
 
+
+  return (
+    <>
     <Grid container sx={{ display:"flex",gap:'85px', alignItems:"center", justifyContent:"center",padding:"90px"}}>
 
-{isDesktop ? (
-<>
-  <Grid item  md={12} sx={{display:"flex", flexDirection:"column",alignItems:"center",justifyContent:"center",gap:'31px'}}>
+
+<Grid item  md={12} sx={{display:"flex", flexDirection:"column",alignItems:"center",justifyContent:"center",gap:'31px'}}>
           <Grid item>
           <Typography sx={main_heading_styles}> B2b driver services</Typography>
          </Grid>
@@ -98,9 +104,11 @@ const B2bDriverServices = () => {
           
             </Grid>
      </Grid>
+     </Grid>
 
-    
-
+{isDesktop ? (
+<>
+<Grid container sx={{ display:"flex",gap:'85px', alignItems:"center", justifyContent:"center",padding:"90px"}}>
       <Grid item md={12} sx={{display:"flex", flexDirection:"row",}}>
       <Grid item md={10}><img src={b2b1} alt="img" style={{ width: '100%',height:'100%' }} /></Grid>
           <Grid item  sx={{ display:'flex',flexDirection:"column",alignItems:'start', gap:"20px",padding:"10px 30px 20px 15px", background:'#f9e1d9'}}>
@@ -110,7 +118,6 @@ const B2bDriverServices = () => {
           </Typography>
         </Grid>
       </Grid>
-
 
 
       <Grid item md={12} sx={{display:"flex", flexDirection:"row",}}>
@@ -125,7 +132,6 @@ const B2bDriverServices = () => {
 
 
 
-
       <Grid item md={12} sx={{display:"flex", flexDirection:"row",}}>
       <Grid item md={10}><img src={b2b3} alt="img" style={{ width: '100%',height:'100%' }} /></Grid>
           <Grid item  sx={{ display:'flex',flexDirection:"column",alignItems:'start', gap:"20px",padding:"10px 30px 20px 15px",background:'#f9e1d9'}}>
@@ -135,11 +141,12 @@ const B2bDriverServices = () => {
           </Typography>
         </Grid>
       </Grid>
+      </Grid>
 </>
 
 ):(
   <div>
-    tfrtdrt
+      <SimpleSlider/>
   </div>
 )}
 
@@ -148,7 +155,7 @@ const B2bDriverServices = () => {
 
 
 
-    </Grid>
+</>
 
   );
 };
