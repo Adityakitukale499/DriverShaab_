@@ -8,7 +8,6 @@ const Individual = () => {
     <div>
       <Video />
       <AppSection />
-      <Footer />
     </div>
   );
 };

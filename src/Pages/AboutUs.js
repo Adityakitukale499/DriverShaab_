@@ -11,7 +11,6 @@ const AboutUs = () => {
       <Location />
       <AppSection />
       <br />
-      <Footer />
     </div>
   );
 };
