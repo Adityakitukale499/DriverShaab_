@@ -12,6 +12,7 @@ import {
 } from "react-router-dom";
 import Navbar from "./component/Navbar/Navbar";
 import Careers from "./Pages/Careers";
+import './App.css'
 
 const App = () => {
 

@@ -5,13 +5,13 @@ import "../Assets/css/color.css";
 
 const AccordionBlock = ({ title, content, isActive, onClick }) => (
   <li className={`accordion block ${isActive ? "active-block" : ""}`}>
-    <div className={`acc-btn ${isActive ? "active" : ""}`} onClick={onClick}>
+    <div className={`acc-btn ${isActive ? "active" : ""}`} onClick={onClick} style={{fontWeight:700}}>
       <div className="icon-outer">
-        <span className="far fa-angle-down"></span>
+        <span className={`far fa-angle-down`}></span>
       </div>
       {title}
     </div>
-    <div className={`acc-content ${isActive ? "current" : ""}`}>
+    <div className={`acc-content ${isActive ? "current" : ""}`} style={{backgroundColor:'#FFF2EE'}}>
       <div className="content">
         <div className="text">
           <p>{content}</p>

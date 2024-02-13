@@ -312,6 +312,7 @@ const ContactSection = () => {
                         className="contactus-btn-style-one"
                         type="submit"
                         name="submit-form"
+                        // style={{paddingBottom:20}}
                       >
                         SUBMIT
                       </button>

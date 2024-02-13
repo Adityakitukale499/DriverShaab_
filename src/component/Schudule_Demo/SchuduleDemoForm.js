@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import { Box, TextField, Typography, Button, Hidden } from "@mui/material";
+import { Box, TextField, Typography, Button, Hidden, Grid } from "@mui/material";
 
 
 const SchuduleDemoForm = () => {
@@ -25,7 +25,13 @@ const SchuduleDemoForm = () => {
       };
 
   return (
-    <div style={{display:'flex',marginTop:"30px",width:"500px", alignItems:"center", justifyContent:"center", marginRight:"auto",marginLeft:"auto"}}>
+    <Box display={'flex'} justifyContent={'center'} my={2}>
+    <Grid container maxWidth={'1200px'}>
+      <Grid item lg={6} display={{lg:'flex',xs:'none'}} justifyContent={'center'}>
+        <img src="scheduledemo.png" alt="" />
+      </Grid>
+      <Grid item lg={6} md={12} xs={12} display={'flex'} justifyContent={'center'}>
+      <div style={{display:'flex',marginTop:"30px",maxWidth:"500px",}}>
        <div className="joinasdriver_form_container">
           <div className="joinasdriver_heading">
             <p className="join-as-driver-heading">Schedule a demo with us</p>
@@ -94,6 +100,9 @@ const SchuduleDemoForm = () => {
           </div>
           </div>
     </div>
+      </Grid>
+    </Grid>
+    </Box>
   )
 }
 

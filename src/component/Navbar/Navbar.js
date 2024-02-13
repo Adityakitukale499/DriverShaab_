@@ -16,11 +16,12 @@ import {
   Box,
 } from "@mui/material";
 import {
-  Menu as MenuIcon,
+  // Menu as MenuIcon,
   Home as HomeIcon,
   ExpandMore as ExpandMoreIcon,
 } from "@mui/icons-material";
-import { Link, useNavigate } from "react-router-dom";
+import MenuIcon from '@mui/icons-material/Menu';
+import { NavLink, useNavigate } from "react-router-dom";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
@@ -39,6 +40,9 @@ const App = () => {
       setAnchorEl(null);
     }, 2000);
   };
+  const handleMenuClosed = () => {
+      setAnchorEl(null);
+  };
 
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
@@ -52,51 +56,48 @@ const App = () => {
         style={{ background: "#121212", padding: "10px" }}
       >
         <Toolbar>
-
           <Box sx={{ display: "flex", flexDirection: "row", flexGrow: 1 }}>
             <img src="Frame 3971.png" alt="img" style={{}} />
           </Box>
 
           {isDesktop ? (
             <Breadcrumbs>
-              <Link
-                color="#fffff"
+              <NavLink
                 to="/"
                 style={{
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#fff",
+                  color: "#ffff",
                 }}
               >
                 Home
-              </Link>
-              <Link
-                color="#fffff"
+              </NavLink>
+              <NavLink
                 to="/aboutus"
                 style={{
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#fff",
+                  color: "#ffff",
                 }}
               >
                 About
-              </Link>
-              <Link
+              </NavLink>
+              <NavLink
                 color="#fffff"
                 to="/careers"
                 style={{
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#fff",
+                  color: "#ffff",
                 }}
               >
                 Careers
-              </Link>
+              </NavLink>
 
-              <Link
+              <NavLink
                 color="#fffff"
                 onMouseOver={handleMenuOpen}
                 onMouseLeave={handleMenuClose}
@@ -104,26 +105,26 @@ const App = () => {
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#fff",
+                  color: "#ffff",
                   marginLeft: "10px",
                 }}
               >
                 Services{" "}
                 {anchorEl ? <ArrowDropDownIcon /> : <ArrowDropUpIcon />}
-              </Link>
+              </NavLink>
 
-              <Link
+              <NavLink
                 color="#fffff"
                 to="/contactus"
                 style={{
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#fff",
+                  color: "#ffff",
                 }}
               >
                 Contact
-              </Link>
+              </NavLink>
 
               <Button
                 sx={{
@@ -143,6 +144,7 @@ const App = () => {
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={handleMenuClose}
+                // onClose={handleMenuClosed}
                 onMouseOver={handleMenuOpen}
                 onMouseLeave={handleMenuClose}
               >
@@ -152,7 +154,8 @@ const App = () => {
                 <MenuItem to="/businesses">Businesses</MenuItem>
               </Menu>
             </Breadcrumbs>
-          ) : (
+          )
+           : (
             <IconButton
               edge="end"
               color="inherit"
@@ -169,11 +172,13 @@ const App = () => {
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
+            onClick={handleMenuOpen}
           >
             <MenuItem
               onClick={() => {
                 handleMenuClose();
                 navigate("/inidividual");
+            
               }}
               sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px" }}
             >
@@ -183,6 +188,7 @@ const App = () => {
               onClick={() => {
                 handleMenuClose();
                 navigate("/businesses");
+                
               }}
               sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px" }}
             >
@@ -199,39 +205,52 @@ const App = () => {
       >
         <div>
           <List>
-            <ListItem button to="/" onClick={handleDrawerToggle}>
+            <ListItem      
+              onClick={() => {
+                navigate("/");
+                handleDrawerToggle();
+              
+              }}
+            >
               <ListItemText primary="Home" />
             </ListItem>
 
-            <ListItem button to="/aboutus" onClick={handleDrawerToggle}>
+            <ListItem
+              onClick={() => {
+                navigate("/aboutus");
+                handleDrawerToggle();
+              }}
+            >
               <ListItemText primary="About" />
             </ListItem>
 
-            <ListItem button to="/careers" onClick={handleDrawerToggle}>
+            <ListItem
+              onClick={() => {
+                navigate("/careers");
+                handleDrawerToggle();
+              }}
+            >
               <ListItemText primary="Careers" />
             </ListItem>
 
-            <ListItem button onClick={handleMenuOpen}>
+            <ListItem 
+            button 
+            >
               <ListItemText primary="Services" />
-              <ExpandMoreIcon />
+              <ExpandMoreIcon  onClick={handleMenuOpen}/>
             </ListItem>
 
-            <ListItem button to="/contactus" onClick={handleDrawerToggle}>
+            <ListItem
+              button
+              onClick={() => {
+                navigate("/contactus");
+                handleDrawerToggle();
+              }}
+            >
               <ListItemText primary="Contact" />
             </ListItem>
 
-            <Menu
-              anchorEl={anchorEl}
-              open={Boolean(anchorEl)}
-              onClose={handleMenuClose}
-            >
-              <MenuItem to="/inidividual" onClick={handleMenuClose}>
-                Individual
-              </MenuItem>
-              <MenuItem to="/businesses" onClick={handleMenuClose}>
-                Businesses
-              </MenuItem>
-            </Menu>
+           
           </List>
         </div>
       </Drawer>
