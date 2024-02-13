@@ -15,7 +15,7 @@ const TeamSection = () => {
   <h1>Elevating Journeys for 5 Years</h1>
   <p>Drivershaab has been dedicated to providing unparalleled driver services to individuals and businesses across 25 cities, covering an impressive distance of over 5000 km. Our story is one of commitment, reliability, and the unwavering pursuit of excellence.</p>
 </div>
-<img src="img.png" alt="img.png" style={{ width: '1086px', height: '480px', borderRadius: '9px', margin: '20px auto' }} />
+<img src="img.png" alt="img.png" style={{ maxWidth: '100%', borderRadius: '9px', margin: '20px auto' }} />
 
 
           <h2>Meet Our Experts</h2>

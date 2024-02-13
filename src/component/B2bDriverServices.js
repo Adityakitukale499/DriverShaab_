@@ -81,7 +81,7 @@ const B2bDriverServices = () => {
 
   return (
     <>
-      <Grid container sx={{ display: "flex", gap: '85px', alignItems: "center", justifyContent: "center", padding: "90px" }}>
+      <Grid container sx={{ display: "flex", gap: '85px', alignItems: "center", justifyContent: "center", padding: "10px 50px" }}>
         <Grid item md={12} sx={{ display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: '31px' }}>
           <Typography sx={main_heading_styles}> B2b driver services</Typography>
           <Typography sx={main_description_styles}>

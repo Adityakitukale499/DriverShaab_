@@ -16,12 +16,11 @@ import {
   Box,
 } from "@mui/material";
 import {
-  // Menu as MenuIcon,
   Home as HomeIcon,
   ExpandMore as ExpandMoreIcon,
 } from "@mui/icons-material";
 import MenuIcon from '@mui/icons-material/Menu';
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 
@@ -30,6 +29,7 @@ const App = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width:1000px)");
+  const pathLocation = useLocation()
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
@@ -38,10 +38,10 @@ const App = () => {
   const handleMenuClose = () => {
     setTimeout(() => {
       setAnchorEl(null);
-    }, 2000);
+    }, 1000);
   };
   const handleMenuClosed = () => {
-      setAnchorEl(null);
+    setAnchorEl(null);
   };
 
   const handleDrawerToggle = () => {
@@ -64,67 +64,69 @@ const App = () => {
             <Breadcrumbs>
               <NavLink
                 to="/"
-                style={{
+                style={({ isActive }) => ({
+                  color: isActive ? '#FB561E' : '#ffff',
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#ffff",
-                }}
+                  textDecoration: 'none'
+                })}
               >
                 Home
               </NavLink>
               <NavLink
                 to="/aboutus"
-                style={{
+                style={({ isActive }) => ({
+                  color: isActive ? '#FB561E' : '#ffff',
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#ffff",
-                }}
+                  textDecoration: 'none'
+                })}
               >
                 About
               </NavLink>
               <NavLink
-                color="#fffff"
                 to="/careers"
-                style={{
+                style={({ isActive }) => ({
+                  color: isActive ? '#FB561E' : '#ffff',
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#ffff",
-                }}
+                  textDecoration: 'none'
+                })}
               >
                 Careers
               </NavLink>
 
               <NavLink
-                color="#fffff"
                 onMouseOver={handleMenuOpen}
                 onMouseLeave={handleMenuClose}
-                style={{
+                style={({ isActive }) => ({
+                  color: ['/businesses', '/inidividual'].includes(pathLocation.pathname) ? '#FB561E' : '#ffff',
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#ffff",
-                  marginLeft: "10px",
-                }}
+                  textDecoration: 'none'
+                })}
               >
                 Services{" "}
                 {anchorEl ? <ArrowDropDownIcon /> : <ArrowDropUpIcon />}
               </NavLink>
 
               <NavLink
-                color="#fffff"
                 to="/contactus"
-                style={{
+                style={({ isActive }) => ({
+                  color: isActive ? '#FB561E' : '#ffff',
                   fontFamily: "Inter",
                   fontWeight: 400,
                   fontSize: "18px",
-                  color: "#ffff",
-                }}
+                  textDecoration: 'none'
+                })}
               >
                 Contact
               </NavLink>
+
 
               <Button
                 sx={{
@@ -155,17 +157,17 @@ const App = () => {
               </Menu>
             </Breadcrumbs>
           )
-           : (
-            <IconButton
-              edge="end"
-              color="inherit"
-              aria-label="menu"
-              onClick={handleDrawerToggle}
-              sx={{ ml: "auto", display: { sm: "block" }, }}
-            >
-              <MenuIcon sx={{bgcolor:'#fb7500', fontSize:25 }}/>
-            </IconButton>
-          )}
+            : (
+              <IconButton
+                edge="end"
+                color="inherit"
+                aria-label="menu"
+                onClick={handleDrawerToggle}
+                sx={{ ml: "auto", display: { sm: "block" }, }}
+              >
+                <MenuIcon sx={{ bgcolor: '#fb7500', fontSize: 25 }} />
+              </IconButton>
+            )}
 
           <Menu
             id="menu-appbar"
@@ -173,21 +175,25 @@ const App = () => {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
             onClick={handleMenuOpen}
-            sx={{"& .MuiList-root":{
-              bgcolor:'#212121',
-              width:'250px',
-              
-            },pt:2}}
+            sx={{
+              "& .MuiList-root": {
+                bgcolor: '#212121',
+                width: '250px',
+
+              }, pt: 2
+            }}
           >
             <MenuItem
               onClick={() => {
                 handleMenuClose();
                 navigate("/inidividual");
-                
+
               }}
-              sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px",bgcolor:'#212121', color:'#fff', "&:hover":{
-                bgcolor:'#919191', color:'#fff'
-              },borderBottom:'1px solid #d3d3d3' }}
+              sx={{
+                fontFamily: "Inter", fontWeight: 400, fontSize: "18px", bgcolor: '#212121', color: '#fff', "&:hover": {
+                  bgcolor: '#919191', color: '#fff'
+                }, borderBottom: '1px solid #d3d3d3'
+              }}
             >
               Individual
             </MenuItem>
@@ -195,11 +201,13 @@ const App = () => {
               onClick={() => {
                 handleMenuClose();
                 navigate("/businesses");
-                
+
               }}
-              sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px",bgcolor:'#212121', color:'#fff', "&:hover":{
-                bgcolor:'#919191', color:'#fff'
-              } }}
+              sx={{
+                fontFamily: "Inter", fontWeight: 400, fontSize: "18px", bgcolor: '#212121', color: '#fff', "&:hover": {
+                  bgcolor: '#919191', color: '#fff'
+                }
+              }}
             >
               Businesses
             </MenuItem>
@@ -214,11 +222,11 @@ const App = () => {
       >
         <div>
           <List>
-            <ListItem      
+            <ListItem
               onClick={() => {
                 navigate("/");
                 handleDrawerToggle();
-              
+
               }}
             >
               <ListItemText primary="Home" />
@@ -242,11 +250,11 @@ const App = () => {
               <ListItemText primary="Careers" />
             </ListItem>
 
-            <ListItem 
-            button 
+            <ListItem
+              button
             >
               <ListItemText primary="Services" />
-              <ExpandMoreIcon  onClick={handleMenuOpen}/>
+              <ExpandMoreIcon onClick={handleMenuOpen} />
             </ListItem>
 
             <ListItem
@@ -259,7 +267,7 @@ const App = () => {
               <ListItemText primary="Contact" />
             </ListItem>
 
-           
+
           </List>
         </div>
       </Drawer>

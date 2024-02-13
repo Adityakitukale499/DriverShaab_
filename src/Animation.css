@@ -25,11 +25,11 @@
 @keyframes fleep1Animation {
   0% {
     left: -200px;
-    top: 185px;
+    top: 172px;
   }
   100% {
     left: 0px;
-    top: 185px;
+    top: 172px;
   }
 }
 .fleep2-animation {
@@ -70,6 +70,7 @@
 .fleep1 {
   position: absolute;
   z-index: 2;
+  margin-top: 10px;
 }
 .fleep2 {
   position: absolute;
@@ -78,7 +79,7 @@
 }
 .fleep3 {
   position: absolute;
-  margin-top: 100px;
+  margin-top: 90px;
 }
 .fleepbackground {
   position: absolute;

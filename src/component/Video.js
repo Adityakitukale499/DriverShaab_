@@ -37,7 +37,7 @@ const Video = () => {
         <img
           src={YoutubeVideo}
           alt="video"
-          style={{ height: "408px", width: "80vw", borderRadius: "2px" ,margin:"0 auto"}}
+          style={ {width: "90%", borderRadius: "2px" ,margin:"0 5%"}}
         />
       </div>
       

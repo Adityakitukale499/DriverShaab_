@@ -46,19 +46,19 @@ const Footer = () => {
                   <div className="widget-content ms-lg-4">
                     <ul>
                       <li>
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
                       </li>
                       <li>
-                        <a href="#">About Us</a>
+                        <a href="/aboutus">About Us</a>
                       </li>
                       <li>
-                        <a href="#">Meet the Team</a>
+                        <a href="/contactus">Meet the Team</a>
                       </li>
                       <li>
-                        <a href="#">Contact</a>
+                        <a href="/contactus">Contact</a>
                       </li>
                       <li>
-                        <a href="#">Services</a>
+                        <a href="/inidividual">Services</a>
                       </li>
                     </ul>
                   </div>

@@ -45,6 +45,7 @@ const AboutSection = () => {
         alignItems: "center",
         justifyContent: "center",
         position:'relative',
+        padding:'50px 0'
       }}
     >
       
