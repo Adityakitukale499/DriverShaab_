@@ -1,9 +1,9 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
 import "../Assets/css/color.css";
 import BubbleLayout from "./BubbleLayout/BubbleLayout";
+import { Grid} from "@mui/material";
 
 const TestimonialsSection = () => {
   return (

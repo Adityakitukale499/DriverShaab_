@@ -3,18 +3,17 @@ import YoutubeVideo from "../Assets/images/YoutubeVideo.png";
 
 const Video = () => {
   return (
-    <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
-    <div style={{ margin: "auto" ,  display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    margin: "auto",
-    maxWidth:"1100px",
-    marginBottom:'50px'
-    }}>
+    <div
+      style={{
+        width: "100vw",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
       <div
         style={{
-          height: "521px",
-          width: "100%",
+          margin: "auto",
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
@@ -37,17 +36,12 @@ const Video = () => {
         <img
           src={YoutubeVideo}
           alt="video"
-          style={ {width: "90%", borderRadius: "2px" ,margin:"0 5%"}}
+          style={{ height: "408px", width: "80vw", borderRadius: "2px" ,margin:"0 auto"}}
         />
       </div>
       
-    </div>
     </div>
   );
 };
 
 export default Video;
-
-
-
-
