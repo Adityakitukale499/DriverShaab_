@@ -48,7 +48,7 @@ const FeatureSection = () => {
   ];
 
   return (
-    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw", backgroundColor:'#f1f1f1'}}>
+    <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw", backgroundColor:'#f1f1f1', position:'relative', zIndex:11}}>
     <section className="services-section-one" style={{backgroundColor:'#f1f1f1'}} >
       <Container>
         <Box className="content-container" sx={{backgroundColor:'#f1f1f1'}}>
