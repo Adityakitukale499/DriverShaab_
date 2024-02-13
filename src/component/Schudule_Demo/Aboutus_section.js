@@ -58,7 +58,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="aboutus_texts" style={{position:'relative', zIndex:22}}>
+          <div className="aboutus_texts" style={{position:'relative', zIndex:22, backgroundColor:'#fff', marginRight:'50px'}}>
             <div className="aboutus_two_texts">
               <div className="aboutus_heading">
                 WE PROMISE, YOU WILL HAVE THE BEST EXPERIENCE
