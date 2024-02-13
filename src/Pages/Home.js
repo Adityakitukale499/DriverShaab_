@@ -22,7 +22,7 @@ const Home = () => {
       <FeatureSection />
       <BookDemo_Section />
       <Service_Section />
-      <Location/>
+      <Location/> 
       <TeamSection />
       <AppSection />
       <TestimonialsSection />

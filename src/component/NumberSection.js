@@ -48,8 +48,8 @@ const NumberSection = () => {
   };
 
   return (
-    <Box sx={{display:'flex', justifyContent:'center', bgcolor:'#f1f1f1'}}>
-    <Grid container sx={container_styles} position={'relative'} zIndex={2} maxWidth={'1400px'}>
+    <Box sx={{display:'flex', justifyContent:'center', bgcolor:'#f1f1f1',py:3}}  position={'relative'} zIndex={2}>
+    <Grid container sx={container_styles} maxWidth={'1400px'}>
       <Grid item xs={6} md={2.25} sx={wrapper_Styles}>
         <Grid item  sx={number_Styles}><CountUp isCounting end={1600} duration={6} />+</Grid>
         <Grid item sx={text_Styles}>Driver Partners</Grid>
