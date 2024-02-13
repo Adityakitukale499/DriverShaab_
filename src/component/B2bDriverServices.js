@@ -3,7 +3,7 @@ import b2b1 from "../Assets/images/b2b1.png"
 import b2b2 from "../Assets/images/b2b2.png"
 import b2b3 from "../Assets/images/b2b3.png"
 import { Grid, Typography ,useMediaQuery} from "@mui/material";
-import SimpleSlider from "../component/Slider/Slider";
+import SimpleSlider from "./Slider";
 
 // import "slick-carousel/slick/slick.css";
 // import "slick-carousel/slick/slick-theme.css";
