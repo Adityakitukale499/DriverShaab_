@@ -5,7 +5,7 @@ const Video = () => {
   return (
     <div
       style={{
-        width: "100vw",
+        width: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -17,7 +17,6 @@ const Video = () => {
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
-          margin: "auto"
         }}
       >
         <div style={{ height: "113px", width: "100%" }}>

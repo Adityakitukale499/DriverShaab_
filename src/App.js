@@ -21,9 +21,8 @@ const App = () => {
 
   return (
     <div>
-      <div>
+      <div style={{marginTop:'20px'}}>
       <BrowserRouter>
-      {/* <SimpleSlider/> */}
       <Navbar/>
         <Routes>
           <Route exact path="/" element={<Home/>} />

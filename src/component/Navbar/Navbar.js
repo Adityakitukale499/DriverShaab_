@@ -8,21 +8,22 @@ import {
   MenuItem,
   Drawer,
   Breadcrumbs,
-  List,
   ListItem,
-  ListItemText,
   useMediaQuery,
   Button,
   Box,
 } from "@mui/material";
-import {
-  Home as HomeIcon,
-  ExpandMore as ExpandMoreIcon,
-} from "@mui/icons-material";
+import List from '@mui/material/List';
+import ListItemButton from '@mui/material/ListItemButton';
+import ListItemText from '@mui/material/ListItemText';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
 import MenuIcon from '@mui/icons-material/Menu';
 import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
+
 
 const App = () => {
   const navigate = useNavigate();
@@ -30,15 +31,21 @@ const App = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const isDesktop = useMediaQuery("(min-width:1000px)");
   const pathLocation = useLocation()
+  const [open, setOpen] = React.useState(false);
+
+  const handleClick = () => {
+    setOpen(!open);
+  };
 
   const handleMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuClose = () => {
-    setTimeout(() => {
+  const handleMenuClose = () => {    
+    let timeout = setTimeout(() => {
       setAnchorEl(null);
-    }, 1000);
+    },3000);
+    if(!anchorEl) clearTimeout(timeout)
   };
   const handleMenuClosed = () => {
     setAnchorEl(null);
@@ -46,6 +53,7 @@ const App = () => {
 
   const handleDrawerToggle = () => {
     setIsDrawerOpen(!isDrawerOpen);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
@@ -185,7 +193,7 @@ const App = () => {
           >
             <MenuItem
               onClick={() => {
-                handleMenuClose();
+                setAnchorEl(null);
                 navigate("/inidividual");
 
               }}
@@ -199,7 +207,7 @@ const App = () => {
             </MenuItem>
             <MenuItem
               onClick={() => {
-                handleMenuClose();
+                setAnchorEl(null);
                 navigate("/businesses");
 
               }}
@@ -219,57 +227,68 @@ const App = () => {
         open={isDrawerOpen}
         onClose={handleDrawerToggle}
         className="drawer"
+        sx={{
+          "& .MuiPaper-root": {
+            bgcolor: '#212121', color: '#f1f1f1'
+          }
+        }}
       >
-        <div>
-          <List>
-            <ListItem
-              onClick={() => {
-                navigate("/");
+        <List
+          sx={{ width: '60vw', bgcolor: 'background.paper', bgcolor: '#212121', color: '#f1f1f1' }}
+          component="nav"
+          aria-labelledby="nested-list-subheader"
+        >
+          <ListItemButton onClick={() => {
+            handleDrawerToggle();
+            navigate("/");
+
+          }}>
+            <ListItemText >Home</ListItemText>
+          </ListItemButton>
+          <ListItemButton onClick={() => {
+            handleDrawerToggle();
+            navigate("/aboutus");
+
+          }}>
+            <ListItemText>About</ListItemText>
+          </ListItemButton>
+          <ListItemButton onClick={() => {
+            handleDrawerToggle();
+            navigate("/careers");
+
+          }}>
+            <ListItemText>Careers</ListItemText>
+          </ListItemButton>
+          <ListItemButton onClick={handleClick}>
+            <ListItemText >Services</ListItemText>
+            {open ? <ExpandLess /> : <ExpandMore />}
+          </ListItemButton>
+          <Collapse in={open} timeout="auto" unmountOnExit>
+            <List component="div" disablePadding>
+              <ListItemButton sx={{ pl: 4 }} onClick={() => {
                 handleDrawerToggle();
+                navigate("/inidividual");
 
-              }}
-            >
-              <ListItemText primary="Home" />
-            </ListItem>
-
-            <ListItem
-              onClick={() => {
-                navigate("/aboutus");
+              }}>
+                <ListItemText >Inidividual</ListItemText>
+              </ListItemButton>
+              <ListItemButton sx={{ pl: 4 }} onClick={() => {
                 handleDrawerToggle();
-              }}
-            >
-              <ListItemText primary="About" />
-            </ListItem>
+                navigate("/businesses");
 
-            <ListItem
-              onClick={() => {
-                navigate("/careers");
-                handleDrawerToggle();
-              }}
-            >
-              <ListItemText primary="Careers" />
-            </ListItem>
+              }}>
+                <ListItemText >Businesses</ListItemText>
+              </ListItemButton>
+            </List>
+          </Collapse>
+          <ListItemButton onClick={() => {
+            handleDrawerToggle();
+            navigate("/contact");
 
-            <ListItem
-              button
-            >
-              <ListItemText primary="Services" />
-              <ExpandMoreIcon onClick={handleMenuOpen} />
-            </ListItem>
-
-            <ListItem
-              button
-              onClick={() => {
-                navigate("/contactus");
-                handleDrawerToggle();
-              }}
-            >
-              <ListItemText primary="Contact" />
-            </ListItem>
-
-
-          </List>
-        </div>
+          }}>
+            <ListItemText>Contact</ListItemText>
+          </ListItemButton>
+        </List>
       </Drawer>
 
       <Toolbar />

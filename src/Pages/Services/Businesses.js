@@ -10,14 +10,16 @@ const Businesses = () => {
   return (
     <div
       style={{
-        marginTop: "100px",
+        marginTop: "50px",
         display:'flex',
         flexDirection:'column',
         justifyContent:'center',
-        alignItems:'center'
+        alignItems:'center',
       }}
     >
-      <div>
+      <div style={{
+        maxWidth:'1200px'
+      }}>
         <Video />
       </div>
       <div style={{
@@ -29,7 +31,7 @@ const Businesses = () => {
       
      
       <div style={{
-        maxWidth:'1200px'
+        // maxWidth:'1200px'
       }}>
         <SchuduleDemoForm />
       </div>

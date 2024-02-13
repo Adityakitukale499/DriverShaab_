@@ -1,6 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
-import { Grid, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import b2b1 from "../Assets/images/b2b1.png";
@@ -10,7 +10,7 @@ import '../Animation.css'
 const styles = {
   container: {
     padding: "0 20px",
-    margin:'10px'
+    margin: '10px'
   },
   itemContainer: {
     display: "flex",
@@ -22,11 +22,10 @@ const styles = {
     alignItems: "start",
     gap: "20px",
     padding: "10px 30px 20px 15px",
+    maxWidth: '400px'
   },
   image: {
-    width: "100%",
-    height: "100%",
-    minWidth:'300px'
+    maxWidth: '90vw'
   },
   background1: {
     background: "#f9e1d9",
@@ -70,19 +69,17 @@ function SimpleSlider() {
   ];
 
   return (
-    <div className="slider-container" style={styles.container}>
+    <div className="slider-container" style={{width:'90vw',margin:'0 5vw'}}>
       <Slider {...settings}>
         {slideContents.map((slide, index) => (
           <div key={index}>
-            <Grid container sx={styles.itemContainer}>
-              <Grid item xs={6}>
+            <Box sx={{width:'100%'}}>
                 <img src={slide.image} alt="img" style={styles.image} />
-              </Grid>
-              <Grid item sx={{ ...styles.descriptionContainer, ...slide.backgroundStyle }}>
-                <Typography sx={styles.heading}>{slide.heading}</Typography>
-                <Typography sx={styles.description}>{slide.description}</Typography>
-              </Grid>
-            </Grid>
+              <Box sx={{width:'90vw', ...styles.descriptionContainer, ...slide.backgroundStyle}}>
+                <Typography >{slide.heading}</Typography>
+                <Typography >{slide.description}</Typography>
+              </Box>
+            </Box>
           </div>
         ))}
       </Slider>

@@ -5,7 +5,7 @@ import Footer from "../../component/Footer";
 
 const Individual = () => {
   return (
-    <div>
+    <div style={{marginTop:'50px'}}>
       <Video />
       <AppSection />
     </div>
