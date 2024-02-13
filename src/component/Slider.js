@@ -3,10 +3,10 @@ import Slider from "react-slick";
 import { Grid, Typography } from "@mui/material";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import b2b1 from "../../Assets/images/b2b1.png";
-import b2b2 from "../../Assets/images/b2b2.png";
-import b2b3 from "../../Assets/images/b2b3.png";
-import '../../Animation.css'
+import b2b1 from "../Assets/images/b2b1.png";
+import b2b2 from "../Assets/images/b2b2.png";
+import b2b3 from "../Assets/images/b2b3.png";
+import '../Animation.css'
 const styles = {
   container: {
     padding: "0 20px",
