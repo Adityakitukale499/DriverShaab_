@@ -117,6 +117,7 @@ const App = () => {
                   fontSize: "18px",
                   textDecoration: 'none'
                 })}
+                onClick={()=> setAnchorEl(null)}
               >
                 Services{" "}
                 {anchorEl ? <ArrowDropDownIcon /> : <ArrowDropUpIcon />}
@@ -154,9 +155,6 @@ const App = () => {
                 anchorEl={anchorEl}
                 open={Boolean(anchorEl)}
                 onClose={handleMenuClose}
-                // onClose={handleMenuClosed}
-                onMouseOver={handleMenuOpen}
-                onMouseLeave={handleMenuClose}
               >
                 <MenuItem onClick={handleMenuClose} to="/inidividual">
                   Individual
@@ -181,8 +179,7 @@ const App = () => {
             id="menu-appbar"
             anchorEl={anchorEl}
             open={Boolean(anchorEl)}
-            onClose={handleMenuClose}
-            onClick={handleMenuOpen}
+            onClose={handleMenuClosed}
             sx={{
               "& .MuiList-root": {
                 bgcolor: '#212121',
