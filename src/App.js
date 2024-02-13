@@ -15,6 +15,7 @@ import Careers from "./Pages/Careers";
 import './App.css'
 import SimpleSlider from "./component/Slider";
 import BubbleLayout from "./component/BubbleLayout/BubbleLayout";
+import Footer from "./component/Footer";
 
 const App = () => {
 
@@ -34,7 +35,7 @@ const App = () => {
           <Route path="/joinasdriver" element={<JoinasDriver/>} />
           <Route path="/scheduledemo" element={<ScheduleDemo/>} />
         </Routes>
-           
+           <Footer/>
         </BrowserRouter>
    
       </div>

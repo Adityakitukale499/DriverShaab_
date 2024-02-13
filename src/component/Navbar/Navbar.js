@@ -173,14 +173,21 @@ const App = () => {
             open={Boolean(anchorEl)}
             onClose={handleMenuClose}
             onClick={handleMenuOpen}
+            sx={{"& .MuiList-root":{
+              bgcolor:'#212121',
+              width:'250px',
+              
+            },pt:2}}
           >
             <MenuItem
               onClick={() => {
                 handleMenuClose();
                 navigate("/inidividual");
-            
+                
               }}
-              sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px" }}
+              sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px",bgcolor:'#212121', color:'#fff', "&:hover":{
+                bgcolor:'#919191', color:'#fff'
+              },borderBottom:'1px solid #d3d3d3' }}
             >
               Individual
             </MenuItem>
@@ -190,7 +197,9 @@ const App = () => {
                 navigate("/businesses");
                 
               }}
-              sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px" }}
+              sx={{ fontFamily: "Inter", fontWeight: 400, fontSize: "18px",bgcolor:'#212121', color:'#fff', "&:hover":{
+                bgcolor:'#919191', color:'#fff'
+              } }}
             >
               Businesses
             </MenuItem>

@@ -8,7 +8,6 @@ const ContactUs = () => {
     <div style={{paddingTop:"30px"}}>
       <ContactSection />
       <AppSection />
-      <Footer />
     </div>
   );
 };

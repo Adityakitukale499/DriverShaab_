@@ -5,59 +5,84 @@
   z-index: 0;
 }
 
-@keyframes bottomToTop {  
-    0% { left:0px; top:190px;}  
-    100% {left:0px; top:0px;}
+@keyframes bottomToTop {
+  0% {
+    left: 0px;
+    top: 190px;
+  }
+  100% {
+    left: 0px;
+    top: 0px;
+  }
 }
 .fleep1-animation {
-    position: relative;
-    animation-name: fleep1Animation;
-    animation-duration: 4s;
-    z-index: 0;
-  }
-  
-  @keyframes fleep1Animation {  
-      0% { left:-200px; top:185px;}  
-      100% {left:0px; top:185px;}
-  }
-  .fleep2-animation {
-    position: relative;
-    animation-name: fleep2Animation;
-    animation-duration: 4s;
-    z-index: 0;
-  }
-  
-  @keyframes fleep2Animation {  
-      0% { left:0px; bottom:200px;}  
-      100% {left:0px; bottom:65px;}
-  }
-  .fleep3-animation {
-    position: relative;
-    animation-name: fleep3Animation;
-    animation-duration: 4s;
-    z-index: 0;
-  }
-  
-  @keyframes fleep3Animation {  
-      0% { left:200px; top:142px;}  
-      100% {left:0px; top:142px;}
-  }
+  position: relative;
+  animation-name: fleep1Animation;
+  animation-duration: 4s;
+  z-index: 0;
+}
 
-.fleep1{
-    position: absolute;
-    z-index: 2;
+@keyframes fleep1Animation {
+  0% {
+    left: -200px;
+    top: 185px;
+  }
+  100% {
+    left: 0px;
+    top: 185px;
+  }
 }
-.fleep2{
-    position: absolute;
-    margin-bottom: 100px;
-    margin-left: 100px;
+.fleep2-animation {
+  position: relative;
+  animation-name: fleep2Animation;
+  animation-duration: 4s;
+  z-index: 0;
 }
-.fleep3{
-    position: absolute;
-    margin-top: 100px;
+
+@keyframes fleep2Animation {
+  0% {
+    left: 0px;
+    bottom: 200px;
+  }
+  100% {
+    left: 0px;
+    bottom: 65px;
+  }
 }
-.fleepbackground{    
-    position: absolute;
-    margin-bottom: 250px;
-    z-index: 0;
+.fleep3-animation {
+  position: relative;
+  animation-name: fleep3Animation;
+  animation-duration: 4s;
+  z-index: 0;
 }
+
+@keyframes fleep3Animation {
+  0% {
+    left: 200px;
+    top: 142px;
+  }
+  100% {
+    left: 0px;
+    top: 142px;
+  }
+}
+
+.fleep1 {
+  position: absolute;
+  z-index: 2;
+}
+.fleep2 {
+  position: absolute;
+  margin-bottom: 100px;
+  margin-left: 100px;
+}
+.fleep3 {
+  position: absolute;
+  margin-top: 100px;
+}
+.fleepbackground {
+  position: absolute;
+  margin-bottom: 250px;
+  z-index: 0;
+}
+

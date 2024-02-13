@@ -11,30 +11,33 @@ const Businesses = () => {
     <div
       style={{
         marginTop: "100px",
+        display:'flex',
+        flexDirection:'column',
+        justifyContent:'center',
+        alignItems:'center'
       }}
     >
       <div>
         <Video />
       </div>
-      <div>
+      <div style={{
+        maxWidth:'1200px'
+      }}>
         {" "}
         <B2bDriverServices />
       </div>
       
      
-      <div>
-        {" "}
+      <div style={{
+        maxWidth:'1200px'
+      }}>
         <SchuduleDemoForm />
       </div>
-      <div>
-        {" "}
+      <div style={{
+      }}>
         <AppSection />
       </div>
       <br />
-      <div>
-        {" "}
-        <Footer />
-      </div>
     </div>
   );
 };

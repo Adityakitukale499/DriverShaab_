@@ -47,7 +47,7 @@ const Hero_Section = () => {
 
   return (
     <div className="sec-hero" style={{ zIndex: -1 }} ref={scrollEffect} >
-      <div className={`sec-hero-text-container-text ${scrollflag ? 'hero-animation' : ''}`}>
+      <div className={`sec-hero-text-container-text hero-animation`}>
         <h1 className="sec-hero-heading">India's Largest Driver Service</h1>
 
         <p className="sec-hero-description">
@@ -56,7 +56,7 @@ const Hero_Section = () => {
           partners across India!
         </p>
       </div>
-      <div className={`sec-hero-btn-div ${scrollflag ? 'hero-animation' : ''}`} style={{ zIndex: 0 }}>
+      <div className={`sec-hero-btn-div hero-animation`} style={{ zIndex: 0 }}>
 
         <Hero_Section_Button
           text="Schedule Demo (B2B)"

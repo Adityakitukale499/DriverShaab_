@@ -28,7 +28,6 @@ const Home = () => {
       <TestimonialsSection />
       <ContactSection />
       <FaqSection />
-      <Footer />
     </div>
   );
 };
