@@ -5139,7 +5139,7 @@ img {
   margin-bottom: 20px;
 }
 
-.accordion-box .block .acc-btn {
+.block .acc-btn {
   position: relative;
   font-size: 14px;
   margin-bottom: 0px;
@@ -5148,8 +5148,8 @@ img {
   line-height: 30px;
   padding: 15px 25px 15px 80px;
   overflow: hidden;
-  font-weight: 400;
-  color: #232323;
+  font-weight: 700;
+  color: #212121;
   background-color: #fafafa;
   border-radius: 2px;
   transition: all 500ms ease;
@@ -5219,7 +5219,8 @@ img {
 }
 
 .accordion-box .block .acc-btn.active .icon-outer {
-  background: #e57400;
+  /* background: #e57400; */
+  background: #fff;
 }
 
 .accordion-box.style-two .block .acc-btn.active .icon-outer {
@@ -11184,6 +11185,7 @@ section.error-section .text {
   border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
   border-color: #d3d3d3;
+  color: #212121;
 }
 
 .accordion-box .block.active-block {
@@ -12118,14 +12120,11 @@ section.map-section {
 }
 .contactus-btn-style-one {
   position: relative;
-  /* display: inline-block; */
   line-height: 24px;
-  padding: 12px 24px;
   overflow: hidden;
   width: 99%;
   height: 35px;
   gap: 8px;
-  /* vertical-align: middle; */
   background-color: #fb561e;
   font-size: 14px;
   color: #fefefe;
