@@ -1503,7 +1503,7 @@ img {
   grid-template-rows: 9fr 1fr;
   /* //gap: 49px; */
 
-  padding: 30px;
+  /* padding: 30px; */
 }
 .aboutus_two_texts {
   display: grid;

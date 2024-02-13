@@ -6,7 +6,7 @@
 }
 
 @keyframes bottomToTop {  
-    0% { left:0px; top:250px;}  
+    0% { left:0px; top:190px;}  
     100% {left:0px; top:0px;}
 }
 .fleep1-animation {

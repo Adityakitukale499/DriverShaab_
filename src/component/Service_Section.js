@@ -12,7 +12,7 @@ const Service_Section = () => {
   return (
     <div style={{display:"flex",alignItems:"center",justifyContent:"center", width:"100vw", backgroundColor:'#f1f1f1'}}>
     <section className="services-section-one"  style={{maxWidth:"1200px", backgroundColor:'#f1f1f1'}}>
-      <Container sx={{bgcolor:"#f1f1f1"}}>
+      <Container sx={{bgcolor:"#f1f1f1",px:0}}>
         <div className="content-container" style={{backgroundColor:'#f1f1f1'}}>
           <div className="sec-title">
             <div className="inner-title-box">

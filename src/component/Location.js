@@ -27,9 +27,9 @@ const Location = () => {
             <img src="img-location-map.png.png" alt="" />
           </Box>
           <Box sx={{ display: 'flex', justifyContent: 'space-evenly' }}>
-            <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 300, fontSize: '48px', lineHeight: '51px', color: '#FB561E', textAlign: 'center' }}>1470 <br /> <span style={{ fontWeight: 400, fontSize: '14px', lineHeight: '18px', color: '#fff' }}>Rental Cars Fleet</span> </Typography>
-            <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 300, fontSize: '48px', lineHeight: '51px', color: '#FB561E', textAlign: 'center' }}>265 <br /> <span style={{ fontWeight: 400, fontSize: '14px', lineHeight: '18px', color: '#fff' }}>5 Star Reviews</span> </Typography>
-            <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 300, fontSize: '48px', lineHeight: '51px', color: '#FB561E', textAlign: 'center' }}>308 <br /> <span style={{ fontWeight: 400, fontSize: '14px', lineHeight: '18px', color: '#fff' }}>Rental Awards</span> </Typography>
+            <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 300, fontSize: '48px', lineHeight: '51px', color: '#FB561E', textAlign: 'center' }}>1470 <br /> <span style={{ fontWeight: 400, fontSize: '14px', lineHeight: '0px', color: '#fff' }}>Rental Cars Fleet</span> </Typography>
+            <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 300, fontSize: '48px', lineHeight: '51px', color: '#FB561E', textAlign: 'center' }}>265 <br /> <span style={{ fontWeight: 400, fontSize: '14px', lineHeight: '0px', color: '#fff' }}>5 Star Reviews</span> </Typography>
+            <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 300, fontSize: '48px', lineHeight: '51px', color: '#FB561E', textAlign: 'center' }}>308 <br /> <span style={{ fontWeight: 400, fontSize: '14px', lineHeight: '0px', color: '#fff' }}>Rental Awards</span> </Typography>
           </Box>
         </Grid>
       </Grid>

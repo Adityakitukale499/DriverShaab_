@@ -44,11 +44,14 @@ const AboutSection = () => {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        position:'relative',
+        zIndex:100
       }}
     >
+      
       <div
         className="aboutus_container"
-        style={{ width: "100vw", maxWidth: "1500px" }}
+        style={{ width: "90vw", maxWidth: "1500px" }}
       >
         <div className="aboutus_text_container">
           <div className="aboutus_text_slash">
@@ -58,7 +61,7 @@ const AboutSection = () => {
             </div>
           </div>
 
-          <div className="aboutus_texts" style={{position:'relative', zIndex:10, backgroundColor:'#fff', marginRight:'50px'}}>
+          <div className="aboutus_texts" style={{position:'relative', zIndex:10, backgroundColor:'#fff', marginRight:{lg:'50px', xs:0}}}>
             <div className="aboutus_two_texts">
               <div className="aboutus_heading">
                 WE PROMISE, YOU WILL HAVE THE BEST EXPERIENCE

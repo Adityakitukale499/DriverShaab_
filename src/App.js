@@ -14,6 +14,7 @@ import Navbar from "./component/Navbar/Navbar";
 import Careers from "./Pages/Careers";
 import './App.css'
 import SimpleSlider from "./component/Slider/Slider";
+import BubbleLayout from "./component/BubbleLayout/BubbleLayout";
 
 const App = () => {
 
