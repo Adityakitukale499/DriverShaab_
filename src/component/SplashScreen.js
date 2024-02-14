@@ -36,7 +36,7 @@ const SplashScreen = ({ setSplash }) => {
     const imageSrc = `splash${count + 1}.png`;
 
     return (
-        <div style={{ height: '100vh', width: '100vw', background: 'linear-gradient(180deg, #BBF8EA 0%, rgba(187, 248, 234, 0.34) 100%)', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <div style={{ height: '100vh', width: '100vw', background:'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} />
             <br />
             <br />
