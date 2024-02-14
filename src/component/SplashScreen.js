@@ -41,9 +41,9 @@ const SplashScreen = ({ setSplash }) => {
             <br />
             <br />
             <LinearProgress variant="buffer" value={progress} sx={{
-                width: '65vw', "& .css-qhoknl-MuiLinearProgress-bar1": {
+                width: '65vw', "& .MuiLinearProgress-bar1Buffer": {
                     bgcolor: '#FB561E'
-                }, "& .css-1qdnzt4-MuiLinearProgress-bar2": {
+                }, "& .MuiLinearProgress-bar2Buffer": {
                     bgcolor: '#2F2C33'
                 },
                 p:0.4,
