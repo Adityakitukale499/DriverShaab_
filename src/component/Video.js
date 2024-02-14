@@ -5,7 +5,7 @@ const Video = () => {
   return (
     <div
       style={{
-        width: "100%",
+        maxWidth: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -35,7 +35,8 @@ const Video = () => {
         <img
           src={YoutubeVideo}
           alt="video"
-          style={{ width: "90%", borderRadius: "2px" ,margin:"0 5%"}}
+          style={{
+            maxWidth:'1200px', width: "90%" ,margin:"0 5%", marginBottom:'40px', borderRadius:'10px'}}
         />
       </div>
       

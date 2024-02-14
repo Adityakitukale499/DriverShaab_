@@ -13,31 +13,33 @@ import {
 import Navbar from "./component/Navbar/Navbar";
 import Careers from "./Pages/Careers";
 import './App.css'
-import SimpleSlider from "./component/Slider";
-import BubbleLayout from "./component/BubbleLayout/BubbleLayout";
 import Footer from "./component/Footer";
+import SplashScreen from "./component/SplashScreen";
+import { useState } from "react";
 
 const App = () => {
+  const [splash, setSplash] = useState(true)
 
   return (
     <div>
-      <div style={{marginTop:'20px'}}>
-      <BrowserRouter>
-      <Navbar/>
-        <Routes>
-          <Route exact path="/" element={<Home/>} />
-          <Route path="/aboutus" element={<AboutUs/>} />
-          <Route path="/contactus" element={<ContactUs/>} />
-          <Route path="/careers" element={<Careers/>} />
-          <Route path="/businesses" element={<Businesses/>} />
-          <Route path="/inidividual" element={<Individual/>} />
-          <Route path="/joinasdriver" element={<JoinasDriver/>} />
-          <Route path="/scheduledemo" element={<ScheduleDemo/>} />
-        </Routes>
-           <Footer/>
-        </BrowserRouter>
-   
-      </div>
+      {splash ? <SplashScreen setSplash={setSplash} /> :
+        <div style={{ marginTop: '20px' }}>
+          <BrowserRouter>
+            <Navbar />
+            <Routes>
+              <Route exact path="/" element={<Home />} />
+              <Route path="/aboutus" element={<AboutUs />} />
+              <Route path="/contactus" element={<ContactUs />} />
+              <Route path="/careers" element={<Careers />} />
+              <Route path="/businesses" element={<Businesses />} />
+              <Route path="/inidividual" element={<Individual />} />
+              <Route path="/joinasdriver" element={<JoinasDriver />} />
+              <Route path="/scheduledemo" element={<ScheduleDemo />} />
+            </Routes>
+            <Footer />
+          </BrowserRouter>
+
+        </div>}
     </div>
   );
 };

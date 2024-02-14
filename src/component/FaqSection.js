@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
 import "../Assets/css/color.css";
+import line from "../Assets/images/line.png";
+import { useMediaQuery } from "@mui/material";
 
 const AccordionBlock = ({ title, content, isActive, onClick }) => (
   <li className={`accordion block ${isActive ? "active-block" : ""}`}>
@@ -22,6 +24,9 @@ const AccordionBlock = ({ title, content, isActive, onClick }) => (
 );
 
 const FaqSection = () => {
+  
+  const isdescktop = useMediaQuery('(max-width:1000px))')
+  console.log(isdescktop)
   const [active, setActive] = useState("First");
 
   const handleAccordionClick = (accordionKey) => {
@@ -30,6 +35,12 @@ const FaqSection = () => {
 
   return (
     <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
+       <div className="aboutus_text_slash" style={{marginRight:'70px',marginLeft:'-80px',display:isdescktop?'block':'none' }}>
+            <div className="aboutus_blur_heading">Feedbacks</div>
+            <div className="line_img">
+              <img src={line} alt="lineimg" style={{ height: "52px" }} />
+            </div>
+          </div> 
     <section className="faq-section" style={{maxWidth:"1200px"}}>
       <div className="auto-container">
         <div className="text-center mb-4">

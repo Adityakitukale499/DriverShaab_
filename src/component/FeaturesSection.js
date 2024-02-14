@@ -66,14 +66,14 @@ const FeatureSection = () => {
             {servicesData.map((service, index) => (
               <div
                 key={index}
-                className="services-block col-md-4 col-sm-6 col-xs-12"
+                className="services-block col-md-4 col-sm-6 col-xs-6"
               >
                 <div className="inner-box">
                   <div className="upper-box">
                     <div className="icon-box">{service.icon}</div>
                     <span className="number">{service.number}</span>
                   </div>
-                  <div className="lower-box">
+                  <div className="lower-box" style={{height:'200px', overflow:'scroll'}}>
                     <Typography variant="h3">
                       <a href="services.html">{service.title}</a>
                     </Typography>

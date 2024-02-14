@@ -27,10 +27,10 @@ const SchuduleDemoForm = () => {
   return (
     <Box display={'flex'} justifyContent={'center'} my={2}>
     <Grid container maxWidth={'1200px'}>
-      <Grid item lg={6} xs={0} display={{lg:'flex',xs:'none'}} justifyContent={'center'}>
+      {/* <Grid item lg={6} xs={0} display={{lg:'flex',xs:'none'}} justifyContent={'center'}>
         <img src="scheduledemo.png" alt="" />
-      </Grid>
-      <Grid item lg={6} md={12} xs={12} display={'flex'} justifyContent={{lg:'end', xs:'center'}} alignItems={'center'}>
+      </Grid> */}
+      <Grid item lg={12} md={12} xs={12} display={'flex'} justifyContent={{lg:'end', xs:'center'}} alignItems={'center'}>
       <div style={{display:'flex',justifyContent:'center',alignItems:'center',marginTop:"30px", width:'90vw',maxWidth:"500px"}}>
        <div className="joinasdriver_form_container">
           <div className="joinasdriver_heading">
@@ -80,7 +80,7 @@ const SchuduleDemoForm = () => {
               />
 
               <TextField
-                label="Additional Info"
+                label="your message..."
                 variant="outlined"
                 fullWidth
                 multiline

@@ -17,9 +17,7 @@ const Businesses = () => {
         alignItems:'center',
       }}
     >
-      <div style={{
-        maxWidth:'1200px'
-      }}>
+      <div >
         <Video />
       </div>
       <div style={{

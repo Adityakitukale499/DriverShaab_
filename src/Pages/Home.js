@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Hero_Section from "../component/Hero_Section";
 import NumberSection from "../component/NumberSection";
 import AboutSection from "../component/Schudule_Demo/Aboutus_section";
@@ -10,11 +10,12 @@ import TestimonialsSection from "../component/TestimonialsSection";
 import TeamSection from "../component/TeamSection";
 import ContactSection from "../component/ContactSection";
 import FaqSection from "../component/FaqSection";
-import Footer from "../component/Footer";
 import Location from "../component/Location"
 
+
+
 const Home = () => {
-  return (
+   return (
     <div>
       <Hero_Section />
       <NumberSection />
@@ -22,7 +23,7 @@ const Home = () => {
       <FeatureSection />
       <BookDemo_Section />
       <Service_Section />
-      <Location/> 
+      <Location />
       <TeamSection />
       <AppSection />
       <TestimonialsSection />

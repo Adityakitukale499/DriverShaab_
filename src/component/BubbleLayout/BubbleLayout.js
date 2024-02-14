@@ -9,7 +9,7 @@ const BubbleLayout = () => {
   return (
     <section className="sticky">
       <div className="bubbles">
-        {[...Array(10)].map((_, index) => (
+        {[...Array(15)].map((_, index) => (
           <Bubble key={index} />
         ))}
       </div>
