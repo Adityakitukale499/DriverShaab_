@@ -285,7 +285,7 @@ const ContactSection = () => {
                   </div>
                 </div> */}
                 {/* Contact Form */}
-                <form method="post" action="sendemail.php" id="contact-form">
+                <form id="contact-form" onSubmit={(e)=> e.preventDefault()}>
                   <div className="row clearfix">
                     <div className="col-md-12 col-sm-12 col-xs-12 form-group">
                       <input type="text" name="username" placeholder="Name *" />
