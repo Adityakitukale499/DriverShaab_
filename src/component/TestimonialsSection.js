@@ -62,7 +62,7 @@ const TestimonialBlock = ({ text, imageSrc, name, designation }) => {
   return (
     <div className="testimonials-block-one">
       <div className="inner-box">
-        <div className="text" style={{fontStyle:'italic'}}>{text}</div>
+        <div className="text" style={{fontStyle:'italic',height:'330px'}}>{text}</div>
         <div className="author-info">
           <div className="image">
             <img src={imageSrc} alt={name} />
