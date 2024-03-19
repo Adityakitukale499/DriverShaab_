@@ -21,7 +21,7 @@ const Service_Section = () => {
               Services
               </p>
               <p className="sec-service-main-heading" style={{backgroundColor:'#f1f1f1'}}>
-                OUR OFERINGS
+              What We Offer At DriverShaab 
               </p>
             </div>
           </div>
@@ -30,20 +30,20 @@ const Service_Section = () => {
             <ServiceSection_card
               src={Service_Section1}
               alt="OurOffering_img2"
-              heading="Customized tech solution"
-              description="Tailored logistics tech solutions enhance efficiency, adaptability, and cost management by customizing software to address specific operational needs."
+              heading="Verified Drivers at Your Service"
+              description="Every DriverShaab member undergoes a thorough background check, including documentation verification, to ensure maximum safety. With our experienced and courteous drivers behind the wheel, you can relax and enjoy your journey."
             />
             <ServiceSection_card
               src={Service_Section2}
-              alt="Service_Section1"
-              heading="Pay as you go"
-              description="The pay-as-you-go model allows users to pay only for the specific resources or services they consume, offering flexibility and cost efficiency without upfront commitments."
+              alt="Service_Section2"
+              heading="Customized Insurance Policy"
+              description="DriverShaab offers insurance policies for you, that can be charged on actuals. We offer up to INR 25,000 in case of any damage that you might have suffered at our hands. All you need to do is share the details and necessary proofs, and you will receive the amount."
             />
             <ServiceSection_card
               src={Service_Section3}
-              alt="Service_Section2"
-              heading="Verified Drivers"
-              description="Drivers with over three years of experience, thoroughly trained, and background verified, ensuring a reliable and skilled workforce for transportation needs."
+              alt="Service_Section3"
+              heading="Postpaid Service"
+              description="Our postpaid services ensure you can make full use of them without worrying about immediate payments. At DriverShaab, we have put in place a monthly billing system. Once your invoice is raised, you can make the payment within seven days. "
             />
           </div>
         </div>

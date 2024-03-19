@@ -18,8 +18,8 @@ const Location = () => {
       <Grid container sx={{maxWidth:'1300px'}}>
         <Grid item lg={6} xs={12} sx={{ p: 5 ,px:{lg:10,xs:0}}} display={'flex'} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
 
-          <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 700, fontSize: '36px', lineHeight: '42px', color: '#fff'}}>We Have Now <span style={{ color: '#FB561E' }}>20+</span> Locations</Typography>
-          <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: '#fff',my:3 }}>Labore dolore magna aliqua ipsum veniam quis nostrud exercitation voluptate eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed eiusmod.</Typography>
+          <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 700, fontSize: '36px', lineHeight: '42px', color: '#fff'}}>Expanding Across the Nation: Now in Over <span style={{ color: '#FB561E' }}>20+</span>  Locations!</Typography>
+          <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 400, fontSize: '16px', lineHeight: '26px', color: '#fff',my:3 }}>Discover the convenience of DriverShaab in more than 20 cities across India! Our rapid expansion means better accessibility and reliable service wherever you are. With a growing presence in major metropolitan areas, we're bringing safe, professional driving services closer to your doorstep. </Typography>
           <Button sx={{bgcolor:'#FB561E', color:'#fff', borderRadius:10, px:3, fontSize:{lg:'22px',xs:'17px'}, fontFamily:'Inter',fontWeight:500}}>join as driver partner</Button>
         </Grid>
         <Grid item lg={6} xs={12}>

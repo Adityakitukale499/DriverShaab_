@@ -29,26 +29,26 @@ const TestimonialsSection = () => {
         <Grid container spacing={2}>
           <Grid item xs={12} lg={4}>
             <TestimonialBlock
-              text="I was very impressed by the company service. Lorem ipsum is simply free text used by copy typing refreshing. Neque porro est dolorem ipsum quia."
+              text='"I never imagined my daily commutes could be stress-free until I started using DriverShaab. Their professional drivers and real-time tracking system have completely transformed my travel experiences."'
               imageSrc="image-14.jpg"
-              name="Mike Hardson"
-              designation="Student"
+              name="Priya S."
+              designation="Mumbai"
             />
           </Grid>
           <Grid item xs={12} lg={4}>
             <TestimonialBlock
-              text="I was very impressed by the company service. Lorem ipsum is simply free text used by copy typing refreshing. Neque porro est dolorem ipsum quia."
+              text='"DriverShaab has been a game-changer for my frequent business trips. The ease of booking, coupled with the impeccable cleanliness of the vehicles, makes every journey a pleasant experience. "'
               imageSrc="image-15.jpg"
-              name="Christine Eve"
-              designation="Student"
+              name="Arjun K."
+              designation="Bengaluru"
             />
           </Grid>
           <Grid item xs={12} lg={4}>
             <TestimonialBlock
-              text="I was very impressed by the company service. Lorem ipsum is simply free text used by copy typing refreshing. Neque porro est dolorem ipsum quia."
+              text='"Experiencing DriverShaab’s round-the-clock customer support firsthand was truly remarkable. There was a time I needed a last-minute ride in the middle of the night, and their team went above and beyond to accommodate my request. "'
               imageSrc="image-16.jpg"
-              name="David Cooper"
-              designation="Student"
+              name="Simran G."
+              designation="New Delhi"
             />
           </Grid>
         </Grid>
@@ -62,7 +62,7 @@ const TestimonialBlock = ({ text, imageSrc, name, designation }) => {
   return (
     <div className="testimonials-block-one">
       <div className="inner-box">
-        <div className="text">{text}</div>
+        <div className="text" style={{fontStyle:'italic'}}>{text}</div>
         <div className="author-info">
           <div className="image">
             <img src={imageSrc} alt={name} />

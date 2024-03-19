@@ -48,12 +48,10 @@ const Hero_Section = () => {
   return (
     <div className="sec-hero" style={{ zIndex: -1 }} ref={scrollEffect} >
       <div className={`sec-hero-text-container-text hero-animation`}>
-        <h1 className="sec-hero-heading">India's Largest Driver Service</h1>
+        <h1 className="sec-hero-heading">India's Premier Driver Service Network</h1>
 
         <p className="sec-hero-description">
-          DriverShaab is a tech enabled driver service which provides drivers
-          to individual car owners via DriverShaab app as well as to B2B and B2C
-          partners across India!
+        DriverShaab is a cutting-edge driver service platform that provides services to individual car owners and a wide range of partners. Experience the difference with India's most extensive network of driving professionals.
         </p>
       </div>
       <div className={`sec-hero-btn-div hero-animation`} style={{ zIndex: 0 }}>

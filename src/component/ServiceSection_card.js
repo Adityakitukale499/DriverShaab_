@@ -6,8 +6,8 @@ const ServiceSection_card = ({ src, alt, heading, description }) => {
     <>
       <div className="sec-service-card" style={{backgroundColor:'#fff'}}>
         <img src={src} alt={alt} className="sec-service-img" />
-        <div className="sec-service-text-div">
-        <p className="sec-service-heading">{heading}</p>
+        <div className="sec-service-text-div" style={{overflow:'scroll'}}>
+        <p className="sec-service-heading" style={{width:'100%',textAlign:'center', fontWeight:550}}>{heading}</p>
         <p className="sec-service-description"
         >
           {description}

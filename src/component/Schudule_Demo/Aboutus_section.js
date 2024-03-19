@@ -63,26 +63,18 @@ const AboutSection = () => {
 
           <div className="aboutus_texts" style={{position:'relative', zIndex:10, backgroundColor:'#fff', marginRight:{lg:'50px', xs:0}}}>
             <div className="aboutus_two_texts">
-              <div className="aboutus_heading">
-                WE PROMISE, YOU WILL HAVE THE BEST EXPERIENCE
+              <div className="aboutus_heading">We Are Your Trusted Partner for Safe and Reliable Journeys
               </div>
 
               <div className="text">
                 <p>
-                  At DriverShaab we eliminate your hassle of driving with our
-                  timely and on-demand driver booking services. Whether it is
-                  late night partying, driving to work, going for a long trip or
-                  more, we got you covered!
+                You can now drive to work on time, explore the city, or go on a long, hassle-free journey. DriverShaab brings you the power of safe and stress-free travel with our driving solutions. We maintain safety standards and offer reliable solutions to satisfy our customers, making us the go-to choice for travelers.
+
+
+
                 </p>
                 <p>
-                  We also provide SaaS based driver related services to our B2B
-                  corporate and logistics partners, feel free to reach out to us
-                  and schedule a demo.
-                </p>
-                <p>
-                  Our Driver partners are background verified and both
-                  transmission trained so all you need to do is now is schedule
-                  a ride!
+                We verify our drivers and ensure only experienced people sit behind the wheel. With 24/7 services and support features, you need not worry about returning from a late-night event or a night trip by road. Our fleet of vehicles are checked and inspected thoroughly. We offer services to B2B and logistics customers. Schedule a demo with us today!
                 </p>
               </div>
             </div>
