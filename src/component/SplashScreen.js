@@ -38,6 +38,9 @@ const SplashScreen = ({ setSplash }) => {
     return (
         <div style={{ height: '100vh', width: '100vw', background:'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} />
+            
+            {/* <video src={'onbordingvideo.mp4'} autoPlay={true} onError={(e) => console.error('Video playback error:', e)} style={{height:'40vh'}}/> */}
+
             <br />
             <br />
             <LinearProgress variant="buffer" value={progress} sx={{
@@ -54,3 +57,4 @@ const SplashScreen = ({ setSplash }) => {
 };
 
 export default SplashScreen;
+

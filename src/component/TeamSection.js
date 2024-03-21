@@ -43,7 +43,7 @@ const TeamSection = () => {
                   <div className="frame">
                     <div className="inner-box">
                       <div className="image img_hover_3">
-                      <img style={{height:'170px'}} src={member.imageSrc} alt={member.name} />
+                      <img style={{}} src={member.imageSrc} alt={member.name} />
                       </div>
                       <div className="lower-content" style={{}}>
                         <div className="name">{member.name}</div>

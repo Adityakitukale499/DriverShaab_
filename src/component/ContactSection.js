@@ -304,7 +304,7 @@ const ContactSection = () => {
                     </div> */}
 
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">
-                      <textarea name="message" placeholder="Message"></textarea>
+                      <textarea name="message" placeholder="Message" style={{borderRadius:'10px'}}></textarea>
                     </div>
 
                     <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12 form-group">

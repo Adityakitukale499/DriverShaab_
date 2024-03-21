@@ -65,7 +65,7 @@ const App = () => {
       >
         <Toolbar>
           <Box sx={{ display: "flex", flexDirection: "row", flexGrow: 1 }}>
-            <img src="logodr.png" alt="img" style={{height:'65px'}} />
+            <img src="logodr.png" alt="img" style={{height:'65px'}} onClick={()=> navigate('/')}/>
           </Box>
 
           {isDesktop ? (
@@ -139,12 +139,13 @@ const App = () => {
 
               <Button
                 sx={{
-                  fontSize: "18px",
+                  fontSize: "17px",
                   fontWeight: 500,
                   fontFamily: "Inter",
                   color: "#fff",
                   bgcolor: "#FB561E",
                   borderRadius: 10,
+                  textTransform: 'none'
                 }}
               >
                 Download DriverShaab
