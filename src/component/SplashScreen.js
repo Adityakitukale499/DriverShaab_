@@ -1,5 +1,7 @@
 import { LinearProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
+import { DefaultPlayer as Video} from 'react-html5video';
+import 'react-html5video/dist/styles.css';
 
 
 const SplashScreen = ({ setSplash }) => {
@@ -22,7 +24,7 @@ const SplashScreen = ({ setSplash }) => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setProgress(prevCount => {
-                const newCount = prevCount + 10;
+                const newCount = prevCount + 4;
                 if (newCount >= 100) {
                     clearInterval(intervalId);
                     setSplash(false)
@@ -37,9 +39,13 @@ const SplashScreen = ({ setSplash }) => {
 
     return (
         <div style={{ height: '100vh', width: '100vw', background:'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
-            <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} />
+            {/* <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} /> */}
             
             {/* <video src={'onbordingvideo.mp4'} autoPlay={true} onError={(e) => console.error('Video playback error:', e)} style={{height:'40vh'}}/> */}
+            <Video autoPlay loop muted
+           style={{height:'40vh'}}>
+            <source src="onbordingvideo.mp4" type="video/mp4" />
+        </Video>
 
             <br />
             <br />
