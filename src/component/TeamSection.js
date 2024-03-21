@@ -45,7 +45,7 @@ const TeamSection = () => {
                       <div className="image img_hover_3">
                       <img style={{height:'170px'}} src={member.imageSrc} alt={member.name} />
                       </div>
-                      <div className="lower-content" style={{width:'200px'}}>
+                      <div className="lower-content" style={{}}>
                         <div className="name">{member.name}</div>
                         <div className="designation">{member.designation}</div>
                         <ul className="social-links">

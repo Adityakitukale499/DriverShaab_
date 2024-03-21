@@ -4211,7 +4211,15 @@ Image Hover
 .img_hover_3 img{
     width: 100%;
     transition: all 500ms ease;
+    height: 270px;
 } 
+@media only screen and (max-width: 768px){
+    .img_hover_3 img{
+        /* width: 100%; */
+        /* transition: all 500ms ease; */
+        height: 130px;
+    } 
+}
 .img_hover_3:before{
     position: absolute;
     top: 0;

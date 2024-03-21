@@ -10513,6 +10513,7 @@ section.our-team-section .shape {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
+  width: 230px;
 }
 
 .team-block-one .name {
@@ -10563,7 +10564,44 @@ section.our-team-section .shape {
   color: #fff;
   background: var(--theme-color);
 }
-
+@media only screen and (max-width: 768px) {
+  .team-block-one .lower-content {
+    position: relative;
+    padding: 50px 0 30px;
+    background-image: url(../images/shape/shape-5.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 150px;
+  }
+  
+  .team-block-one .name {
+    font-size: 16px;
+    line-height: 18px;
+    color: #212121;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+  
+  .team-block-one .designation {
+    font-size: 12px;
+    line-height: 15px;
+    color: #737373;
+    font-weight: 400;
+    margin-bottom: 15px;
+  }
+  .team-block-one ul.social-links li a {
+    width: 30px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #f0f0f0;
+    display: block;
+    line-height: 32px;
+    font-size: 12px;
+    color: #737373;
+    transition: 0.5s;
+  }
+}
 /* Cta two */
 
 .cta-two {
