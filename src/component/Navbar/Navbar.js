@@ -65,7 +65,7 @@ const App = () => {
       >
         <Toolbar>
           <Box sx={{ display: "flex", flexDirection: "row", flexGrow: 1 }}>
-            <img src="Frame 3971.png" alt="img" style={{}} />
+            <img src="logodr.png" alt="img" style={{height:'65px'}} />
           </Box>
 
           {isDesktop ? (

@@ -115,7 +115,7 @@ const Footer = () => {
               <div className="text">© Copyright 2023 </div>
             </div>
             <div className="logo">
-              <img src="Vector.png" alt="" />
+              <img src="unnamed.png" alt="" style={{height:'60px'}} />
             </div>
             <div className="footer-menu">
               <ul>
