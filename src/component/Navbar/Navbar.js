@@ -41,11 +41,11 @@ const App = () => {
     setAnchorEl(event.currentTarget);
   };
 
-  const handleMenuClose = () => {    
+  const handleMenuClose = () => {
     let timeout = setTimeout(() => {
       setAnchorEl(null);
-    },3000);
-    if(!anchorEl) clearTimeout(timeout)
+    }, 3000);
+    if (!anchorEl) clearTimeout(timeout)
   };
   const handleMenuClosed = () => {
     setAnchorEl(null);
@@ -65,7 +65,10 @@ const App = () => {
       >
         <Toolbar>
           <Box sx={{ display: "flex", flexDirection: "row", flexGrow: 1 }}>
-            <img src="logodr.png" alt="img" style={{height:'65px'}} onClick={()=> navigate('/')}/>
+            <img src="logodr.png" alt="img" style={{ height: '65px' }} onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              navigate('/')
+            }} />
           </Box>
 
           {isDesktop ? (
@@ -117,7 +120,7 @@ const App = () => {
                   fontSize: "18px",
                   textDecoration: 'none'
                 })}
-                onClick={()=> setAnchorEl(null)}
+                onClick={() => setAnchorEl(null)}
               >
                 Services{" "}
                 {anchorEl ? <ArrowDropDownIcon /> : <ArrowDropUpIcon />}
@@ -146,9 +149,9 @@ const App = () => {
                   bgcolor: "#FB561E",
                   borderRadius: 10,
                   textTransform: 'none',
-                  '&:hover':{
-                    color:'#fff',
-                    backgroundColor:'#FB461E'
+                  '&:hover': {
+                    color: '#fff',
+                    backgroundColor: '#FB461E'
                   },
                 }}
               >
