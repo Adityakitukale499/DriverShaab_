@@ -1,6 +1,6 @@
 import { LinearProgress } from '@mui/material';
 import React, { useEffect, useState } from 'react';
-import { DefaultPlayer as Video} from 'react-html5video';
+import { Fullscreen, DefaultPlayer as Video } from 'react-html5video';
 import 'react-html5video/dist/styles.css';
 
 
@@ -38,14 +38,17 @@ const SplashScreen = ({ setSplash }) => {
     const imageSrc = `splash${count + 1}.png`;
 
     return (
-        <div style={{ height: '100vh', width: '100vw', background:'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+        <div style={{ height: '100vh', width: '100vw', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             {/* <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} /> */}
-            
+
             {/* <video src={'onbordingvideo.mp4'} autoPlay={true} onError={(e) => console.error('Video playback error:', e)} style={{height:'40vh'}}/> */}
             <Video autoPlay loop muted
-           style={{height:'40vh'}}>
-            <source src="onbordingvideo.mp4" type="video/mp4" />
-        </Video>
+                controls={false}
+                style={{ height: '40vh' }}
+            >
+
+                <source src="onbordingvideo.mp4" type="video/mp4" />
+            </Video>
 
             <br />
             <br />
@@ -55,8 +58,8 @@ const SplashScreen = ({ setSplash }) => {
                 }, "& .MuiLinearProgress-bar2Buffer": {
                     bgcolor: '#2F2C33'
                 },
-                p:0.4,
-                borderRadius:2
+                p: 0.4,
+                borderRadius: 2
             }} />
         </div>
     );

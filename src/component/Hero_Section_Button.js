@@ -24,7 +24,7 @@ export const Hero_Section_Button = ({
         borderRadius: "30px",
         fontFamily: "Inter",
         fontSize: "22px",
-        px: isDesktop ? "20px" : "10px", //10 //20
+        px: isDesktop ? "20px" : "10px", 
         py : isDesktop ? "15px":"10px",
         fontFamily: "Inter",
         fontWeight: 500,
@@ -34,8 +34,8 @@ export const Hero_Section_Button = ({
           color:'#fff',
           backgroundColor:'#FB461E'
         },
+        textTransform:'none'
       }}
-      // onClick={onClick}
     >
         {text}
     </Button>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Box, Button, Grid, Typography, useMediaQuery } from '@mui/material'
 import AdbIcon from '@mui/icons-material/Adb';
+import AppleIcon from '@mui/icons-material/Apple';
 
 
 
@@ -25,11 +26,11 @@ const AppSection = () => {
               <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
                 <AdbIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
-                  <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Apple IOS</Typography>
+                  <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Android</Typography>
                 </Box>
               </Box>
               <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
-                <AdbIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
+                <AppleIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Apple IOS</Typography>
                 </Box>
