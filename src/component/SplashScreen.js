@@ -24,8 +24,8 @@ const SplashScreen = ({ setSplash }) => {
     useEffect(() => {
         const intervalId = setInterval(() => {
             setProgress(prevCount => {
-                const newCount = prevCount + 4;
-                if (newCount >= 100) {
+                const newCount = prevCount + 3.8;
+                if (newCount >= 102) {
                     clearInterval(intervalId);
                     setSplash(false)
                 }
@@ -44,7 +44,7 @@ const SplashScreen = ({ setSplash }) => {
             {/* <video src={'onbordingvideo.mp4'} autoPlay={true} onError={(e) => console.error('Video playback error:', e)} style={{height:'40vh'}}/> */}
             <Video autoPlay loop muted
                 controls={false}
-                style={{ height: '40vh' }}
+                style={{ width: '80vw' }}
             >
 
                 <source src="onbordingvideo.mp4" type="video/mp4" />
@@ -53,7 +53,7 @@ const SplashScreen = ({ setSplash }) => {
             <br />
             <br />
             <LinearProgress variant="buffer" value={progress} sx={{
-                width: '65vw', "& .MuiLinearProgress-bar1Buffer": {
+                width: '80vw', "& .MuiLinearProgress-bar1Buffer": {
                     bgcolor: '#FB561E'
                 }, "& .MuiLinearProgress-bar2Buffer": {
                     bgcolor: '#2F2C33'
