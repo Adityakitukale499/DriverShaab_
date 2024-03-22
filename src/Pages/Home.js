@@ -11,6 +11,7 @@ import TeamSection from "../component/TeamSection";
 import ContactSection from "../component/ContactSection";
 import FaqSection from "../component/FaqSection";
 import Location from "../component/Location"
+import MissionVision from "../component/MissionVision";
 
 
 
@@ -25,6 +26,7 @@ const Home = () => {
       <Service_Section />
       <Location />
       <TeamSection />
+      <MissionVision/>
       <AppSection />
       <TestimonialsSection />
       <ContactSection />

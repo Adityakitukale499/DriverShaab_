@@ -112,7 +112,7 @@ const Footer = () => {
         <div className="auto-container">
           <div className="wrapper-box">
             <div className="copyright">
-              <div className="text">© Copyright 2023 </div>
+              <div className="text" style={{textAlign:'center'}}>@copyright <br /> change it to all rights reserved to <br />SATADRU TECHNOLOGIES PRIVATE LIMITED </div>
             </div>
             <div className="logo">
               <img src="unnamed.png" alt="" style={{height:'60px'}} />

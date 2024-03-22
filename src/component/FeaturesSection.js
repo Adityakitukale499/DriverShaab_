@@ -53,7 +53,7 @@ const FeatureSection = () => {
         <Box className="content-container" sx={{backgroundColor:'#f1f1f1'}}>
           <div className="sec-title">
             <div className="inner-title-box">
-              <Typography variant="h2" >
+              <Typography variant="h2" textAlign={'center'}>
               Our Promise Of Safety, Reliability, and Comfort
               </Typography>
               <Typography variant="h4"className="rotate-text" style={{color:'#ffffff'}} >
