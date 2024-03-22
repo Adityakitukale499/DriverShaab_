@@ -79,7 +79,7 @@ const AboutSection = () => {
               </div>
             </div>
             <div className={`about_us_btn ${fleep1Visible ? 'hero-animation' : ''}`}>
-              <a href="#" className="book-btn theme-btn btn-style-three">
+              <a href="#" className="book-btn theme-btn btn-style-three" style={{textTransform:'none'}}>
                 Schedule Demo (B2B)
               </a>
             </div>
