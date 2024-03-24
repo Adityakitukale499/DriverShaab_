@@ -4,55 +4,42 @@ import '../Assets/css/bootstrap.css'
 import '../Assets/css/responsive.css'
 import '../Assets/css/color.css'
 import BubbleLayout from './BubbleLayout/BubbleLayout';
-import line from "../Assets/images/line.png";
-import { useMediaQuery } from '@mui/material';
-
+import MailOutlineIcon from '@mui/icons-material/MailOutline';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import FacebookIcon from '@mui/icons-material/Facebook';
 
 const TeamSection = () => {
-  const isdescktop = useMediaQuery('1000px')
   return (
     <div style={{ position: 'relative' }}>
-
-
       <div style={{ width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: 'relative' }}>
-        <div className="aboutus_text_slash" style={{ marginRight: '70px', marginLeft: '-200px', display: isdescktop ? 'block' : 'none' }}>
-          <div className="aboutus_blur_heading">Teams</div>
-          <div className="line_img">
-            <img src={line} alt="lineimg" style={{ height: "52px" }} />
-          </div>
-        </div>
-        <BubbleLayout />
-        <section className="our-team-section style-two" max-width="1200px">
-          <div className="auto-container">
+        <section className="our-team-section style-two" max-width="1200px" style={{zIndex:2}}>
+          <div className="auto-container" >
             <div className="sec-title text-center">
-              {/* <div className="intro-paragraph" style={{height:"fitContent", width: 'auto', margin: '20px auto', fontFamily: 'Inter', fontSize: '20px', fontWeight: 400, lineHeight: '30px', letterSpacing: '0em', textAlign: 'center' }}>
-  <h1>Elevating Journeys for 5 Years</h1>
-  <p>Drivershaab has been dedicated to providing unparalleled driver services to individuals and businesses across 25 cities, covering an impressive distance of over 5000 km. Our story is one of commitment, reliability, and the unwavering pursuit of excellence.</p>
-</div>
-<img src="img.png" alt="img.png" style={{ maxWidth: '100%', borderRadius: '9px', margin: '20px auto' }} /> */}
-
 
               <h2>Meet Our Experts</h2>
-              <div className="image-container text-center">
+              {/* <div className="image-container text-center">
 
-              </div>
+              </div> */}
             </div>
             <div className="row">
               {teamMembers.map((member, index) => (
-                <div key={index} className="col-lg-3 col-md-6 col-xs-6 team-block-one">
+                <div key={index} className="col-lg-2 col-md-6 col-xs-6 team-block-one">
                   <div className="frame">
                     <div className="inner-box">
                       <div className="image img_hover_3">
-                      <img style={{}} src={member.imageSrc} alt={member.name} />
+                        {/* <Avatar src={member.imageSrc} sx={{ height: '160px', width: '160px' }} /> */}
+                        <img src={member.imageSrc} alt={member.name} style={{width:'100%'}} />
                       </div>
-                      <div className="lower-content" style={{}}>
+                      <div className="lower-content">
                         <div className="name">{member.name}</div>
                         <div className="designation">{member.designation}</div>
-                        <ul className="social-links">
+                        <ul className="social-links"  onClick={()=> console.log('firstul')}>
                           {member.socialLinks.map((link, i) => (
-                            <li key={i}>
-                              <a href={link.url} target="_blank">
-                                <i className={`fab ${link.icon}`}></i>
+                            <li key={`socialLinks${Math.random()}`} >
+                              <a href={link.url} target="_blank" rel='noreferrer' >
+                                {link.icon === 'LinkedInIcon' && <LinkedInIcon sx={{ fontSize: '20px', mt: 1.3 }}  />}
+                                {link.icon === 'MailOutlineIcon' && <MailOutlineIcon sx={{ fontSize: '20px', mt: 1.3 }} />}
+                                {link.icon === 'FacebookIcon' && <FacebookIcon sx={{ fontSize: '20px', mt: 1.3 }} />}
                               </a>
                             </li>
                           ))}
@@ -66,7 +53,9 @@ const TeamSection = () => {
             </div>
           </div>
         </section>
+      <BubbleLayout />
       </div>
+
     </div>
   );
 };
@@ -75,42 +64,56 @@ const teamMembers = [
   {
     name: 'Neha Shaikh',
     designation: 'Head of Procurement',
-    imageSrc: 'neha.jpg',
+    imageSrc: 'nehaupdated.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/daisy-saikia-16072211a', icon: 'fa-linkedin' },
-      { url: '#', icon: 'fa-facebook-f' },
-      { url: '#', icon: 'fa-instagram' },
+      { url: 'https://www.linkedin.com/in/daisy-saikia-16072211a', icon: 'LinkedInIcon' },
+      { url: 'mailto:neha.shaikh@drivershaab.com', icon: 'MailOutlineIcon' },
+      { url: '#', icon: 'FacebookIcon'},
     ],
   },
   {
     name: 'Arpit Sinha',
     designation: 'Head of Supply',
-    imageSrc: 'arpit.jpg',
+    imageSrc: 'apritupdated.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/arpit-sinha-60593834', icon: 'fa-linkedin' },
-      { url: '#', icon: 'fa-facebook-f' },
-      { url: '#', icon: 'fa-instagram' },
-    ],
+      { url: 'https://www.linkedin.com/in/arpit-sinha-60593834', icon: 'LinkedInIcon'},
+      { url: 'mailto:arpit.sinha@drivershaab.com', icon: 'MailOutlineIcon' },
+      {
+        url: '#', icon: 'FacebookIcon'
+      }]
   },
   {
     name: 'James Joy',
     designation: 'Head of Operations',
     imageSrc: 'jamesh.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/james-joy-a77358241', icon: 'fa-linkedin' },
-      { url: '#', icon: 'fa-facebook-f' },
-      { url: '#', icon: 'fa-instagram' },
-    ],
+      { url: 'https://www.linkedin.com/in/james-joy-a77358241', icon: 'LinkedInIcon'},
+      { url: '#', icon: 'MailOutlineIcon' },
+      {
+        url: '#', icon: 'FacebookIcon'
+      }]
   },
   {
     name: 'Poulami Chaterjee',
     designation: 'Head of Marketing',
     imageSrc: 'poulami.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/vama-sethia-16116816b', icon: 'fa-linkedin' },
-      { url: '#', icon: 'fa-facebook-f' },
-      { url: '#', icon: 'fa-instagram' },
-    ],
+      { url: 'https://www.linkedin.com/in/vama-sethia-16116816b', icon: 'LinkedInIcon'},
+      { url: '#', icon: 'MailOutlineIcon' },
+      {
+        url: '#', icon: 'FacebookIcon'
+      }]
+  },
+  {
+    name: 'Anchal Negi',
+    designation: 'Recruiter at DriverShaab',
+    imageSrc: 'anchal.jpg',
+    socialLinks: [
+      { url: 'https://www.linkedin.com/in/anchal-negi-155562260/', icon: 'LinkedInIcon'},
+      { url: 'mailto:Anchal.negi@drivershaab.com', icon: 'MailOutlineIcon' },
+      {
+        url: '#', icon: 'FacebookIcon'
+      }]
   }
 ];
 

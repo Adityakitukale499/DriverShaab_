@@ -2755,6 +2755,7 @@ img {
   line-height: 24px;
 }
 
+
 .main-footer .footer-bottom .footer-nav {
   position: relative;
 }
@@ -10041,7 +10042,6 @@ footer.main-footer .widgets-section {
   color: #b3b3b3;
   font-weight: 400;
 }
-
 .footer-bottom .footer-menu ul {
   position: relative;
   display: flex;
@@ -10071,6 +10071,23 @@ footer.main-footer .widgets-section {
   color: #b3b3b3;
   font-weight: 400;
   transition: 0.5s;
+}
+
+@media only screen and (max-width: 767px){
+  .footer-bottom .text  {
+  margin-bottom: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  color: #b3b3b3;
+  font-weight: 400;
+  }
+  .footer-bottom .footer-menu ul li a {
+    font-size: 14px;
+    line-height: 30px;
+    color: #b3b3b3;
+    font-weight: 400;
+    transition: 0.5s;
+  }
 }
 
 .footer-bottom .footer-menu ul li a:hover {
@@ -10305,6 +10322,7 @@ section.introduction-section .image img {
 
 section.introduction-section .image .img_hover_3 {
   border-radius: 50%;
+
 }
 
 section.introduction-section .image:before {
@@ -10477,12 +10495,20 @@ section.our-team-section .shape {
   right: 0;
   bottom: 0;
 }
+
+.our-team-section .auto-container .row{
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 600px) {
   section.our-team-section {
     padding: 10px 0 10px;
   }
-}
 
+  .our-team-section .auto-container .row{
+    display: block;
+  }
+}
 .team-block-one {
   position: relative;
 }
@@ -10513,20 +10539,22 @@ section.our-team-section .shape {
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
-  width: 230px;
+  width: 190px;
+  margin: 0 10px;
+  
 }
 
 .team-block-one .name {
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 20px;
   color: #212121;
   font-weight: 500;
   margin-bottom: 5px;
 }
 
 .team-block-one .designation {
-  font-size: 15px;
-  line-height: 24px;
+  font-size: 13px;
+  line-height: 18px;
   color: #737373;
   font-weight: 400;
   margin-bottom: 20px;
