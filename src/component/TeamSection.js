@@ -23,7 +23,7 @@ const TeamSection = () => {
             </div>
             <div className="row">
               {teamMembers.map((member, index) => (
-                <div key={index} className="col-lg-2 col-md-6 col-xs-6 team-block-one">
+                <div key={index} className={`col-lg-2 col-md-6 col-xs-6 team-block-one colno${index}`}>
                   <div className="frame">
                     <div className="inner-box">
                       <div className="image img_hover_3">
@@ -33,7 +33,7 @@ const TeamSection = () => {
                       <div className="lower-content">
                         <div className="name">{member.name}</div>
                         <div className="designation">{member.designation}</div>
-                        <ul className="social-links"  onClick={()=> console.log('firstul')}>
+                        <ul className="social-links" >
                           {member.socialLinks.map((link, i) => (
                             <li key={`socialLinks${Math.random()}`} >
                               <a href={link.url} target="_blank" rel='noreferrer' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>

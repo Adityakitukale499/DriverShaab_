@@ -10499,6 +10499,7 @@ section.our-team-section .shape {
 .our-team-section .auto-container .row{
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 @media screen and (max-width: 600px) {
   section.our-team-section {
@@ -10507,6 +10508,9 @@ section.our-team-section .shape {
 
   .our-team-section .auto-container .row{
     display: block;
+  }
+  .colno4{
+    margin: 0 24%;
   }
 }
 .team-block-one {

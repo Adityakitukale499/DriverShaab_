@@ -40,11 +40,9 @@ const SplashScreen = ({ setSplash }) => {
     return (
         <div style={{ height: '100vh', width: '100vw', background: 'black', display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
             {/* <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} /> */}
-
-            {/* <video src={'onbordingvideo.mp4'} autoPlay={true} onError={(e) => console.error('Video playback error:', e)} style={{height:'40vh'}}/> */}
             <Video autoPlay loop muted playsInline
                 controls={false}
-                style={{ width: '80vw' }}
+                style={{ width: '80vw',pointerEvents: 'none' }}
             >
 
                 <source src="onbordingvideo.mp4" type="video/mp4" />
