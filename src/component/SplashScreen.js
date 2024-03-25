@@ -42,7 +42,7 @@ const SplashScreen = ({ setSplash }) => {
             {/* <img src={imageSrc} alt={`Splash ${count}`} style={{ maxWidth: '80vw', maxHeight: '60vh' }} /> */}
 
             {/* <video src={'onbordingvideo.mp4'} autoPlay={true} onError={(e) => console.error('Video playback error:', e)} style={{height:'40vh'}}/> */}
-            <Video autoPlay loop muted
+            <Video autoPlay loop muted playsInline
                 controls={false}
                 style={{ width: '80vw' }}
             >

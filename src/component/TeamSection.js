@@ -36,10 +36,10 @@ const TeamSection = () => {
                         <ul className="social-links"  onClick={()=> console.log('firstul')}>
                           {member.socialLinks.map((link, i) => (
                             <li key={`socialLinks${Math.random()}`} >
-                              <a href={link.url} target="_blank" rel='noreferrer' >
-                                {link.icon === 'LinkedInIcon' && <LinkedInIcon sx={{ fontSize: '20px', mt: 1.3 }}  />}
-                                {link.icon === 'MailOutlineIcon' && <MailOutlineIcon sx={{ fontSize: '20px', mt: 1.3 }} />}
-                                {link.icon === 'FacebookIcon' && <FacebookIcon sx={{ fontSize: '20px', mt: 1.3 }} />}
+                              <a href={link.url} target="_blank" rel='noreferrer' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
+                                {link.icon === 'LinkedInIcon' && <LinkedInIcon sx={{ fontSize: '20px', }}  />}
+                                {link.icon === 'MailOutlineIcon' && <MailOutlineIcon sx={{ fontSize: '20px',}} />}
+                                {link.icon === 'FacebookIcon' && <FacebookIcon sx={{ fontSize: '20px', }} />}
                               </a>
                             </li>
                           ))}
