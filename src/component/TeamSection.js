@@ -12,7 +12,7 @@ const TeamSection = () => {
   return (
     <div style={{ position: 'relative' }}>
       <div style={{ width: "100vw", display: "flex", alignItems: "center", justifyContent: "center", position: 'relative' }}>
-        <section className="our-team-section style-two" max-width="1200px" style={{zIndex:2}}>
+        <section className="our-team-section style-two" max-width="1200px" style={{ zIndex: 2 }}>
           <div className="auto-container" >
             <div className="sec-title text-center">
 
@@ -28,7 +28,7 @@ const TeamSection = () => {
                     <div className="inner-box">
                       <div className="image img_hover_3">
                         {/* <Avatar src={member.imageSrc} sx={{ height: '160px', width: '160px' }} /> */}
-                        <img src={member.imageSrc} alt={member.name} style={{width:'100%'}} />
+                        <img src={member.imageSrc} alt={member.name} style={{ width: '100%' }} />
                       </div>
                       <div className="lower-content">
                         <div className="name">{member.name}</div>
@@ -36,9 +36,9 @@ const TeamSection = () => {
                         <ul className="social-links" >
                           {member.socialLinks.map((link, i) => (
                             <li key={`socialLinks${Math.random()}`} >
-                              <a href={link.url} target="_blank" rel='noreferrer' style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-                                {link.icon === 'LinkedInIcon' && <LinkedInIcon sx={{ fontSize: '20px', }}  />}
-                                {link.icon === 'MailOutlineIcon' && <MailOutlineIcon sx={{ fontSize: '20px',}} />}
+                              <a href={link.url} target="_blank" rel='noreferrer' style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                                {link.icon === 'LinkedInIcon' && <LinkedInIcon sx={{ fontSize: '20px', }} />}
+                                {link.icon === 'MailOutlineIcon' && <MailOutlineIcon sx={{ fontSize: '20px', }} />}
                                 {link.icon === 'FacebookIcon' && <FacebookIcon sx={{ fontSize: '20px', }} />}
                               </a>
                             </li>
@@ -53,7 +53,7 @@ const TeamSection = () => {
             </div>
           </div>
         </section>
-      <BubbleLayout />
+        <BubbleLayout />
       </div>
 
     </div>
@@ -68,7 +68,7 @@ const teamMembers = [
     socialLinks: [
       { url: 'https://www.linkedin.com/in/neha-shaikh-8294b1b8/', icon: 'LinkedInIcon' },
       { url: 'mailto:neha.shaikh@drivershaab.com', icon: 'MailOutlineIcon' },
-      { url: '#', icon: 'FacebookIcon'},
+      // { url: '#', icon: 'FacebookIcon'},
     ],
   },
   {
@@ -76,44 +76,40 @@ const teamMembers = [
     designation: 'Head of Supply',
     imageSrc: 'apritupdated.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/arpit-sinha-60593834', icon: 'LinkedInIcon'},
+      { url: 'https://www.linkedin.com/in/arpit-sinha-60593834', icon: 'LinkedInIcon' },
       { url: 'mailto:arpit.sinha@drivershaab.com', icon: 'MailOutlineIcon' },
-      {
-        url: '#', icon: 'FacebookIcon'
-      }]
+      // {    url: '#', icon: 'FacebookIcon' }
+    ]
   },
   {
     name: 'James Joy',
     designation: 'Head of Operations',
     imageSrc: 'jamesh.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/james-joy-a77358241', icon: 'LinkedInIcon'},
-      { url: '#', icon: 'MailOutlineIcon' },
-      {
-        url: '#', icon: 'FacebookIcon'
-      }]
+      { url: 'https://www.linkedin.com/in/james-joy-a77358241', icon: 'LinkedInIcon' },
+      { url: 'mailto:James.joy@drivershaab.com', icon: 'MailOutlineIcon' },
+      // { url: '#', icon: 'FacebookIcon' }
+    ]
   },
   {
     name: 'Poulami Chatterjee',
     designation: 'Head of Marketing',
     imageSrc: 'poulami.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/vama-sethia-16116816b', icon: 'LinkedInIcon'},
-      { url: '#', icon: 'MailOutlineIcon' },
-      {
-        url: '#', icon: 'FacebookIcon'
-      }]
+      { url: 'http://www.linkedin.com/in/poulami-chatterjee-b16292174', icon: 'LinkedInIcon' },
+      { url: 'mailto:Poulami.chatterjee@drivershaab.com', icon: 'MailOutlineIcon' },
+      // { url: '#', icon: 'FacebookIcon' }
+    ]
   },
   {
     name: 'Anchal Negi',
     designation: 'Recruiter at DriverShaab',
     imageSrc: 'anchal.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/anchal-negi-155562260/', icon: 'LinkedInIcon'},
+      { url: 'https://www.linkedin.com/in/anchal-negi-155562260/', icon: 'LinkedInIcon' },
       { url: 'mailto:Anchal.negi@drivershaab.com', icon: 'MailOutlineIcon' },
-      {
-        url: '#', icon: 'FacebookIcon'
-      }]
+      // { url: '#', icon: 'FacebookIcon' }
+    ]
   }
 ];
 

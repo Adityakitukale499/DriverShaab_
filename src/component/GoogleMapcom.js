@@ -17,7 +17,16 @@ const markerPositions = [
   { name: 'Kolkata', location: { lat: 22.520039261798022, lng: 88.38308769624192 } },
   { name: 'mumbai', location: { lat: 19.0760, lng: 72.8777 } },
   { name: 'pune', location: { lat: 18.516726, lng: 73.856255 } },
-  { name: 'nagpur', location: { lat: 21.1458, lng: 79.0882 } },
+  { name: 'delhi', location: { lat: 28.7041, lng: 77.1025 } },
+  { name: 'bangalore', location: { lat: 12.971599, lng: 77.594566 } },
+  { name: 'jaipur', location: { lat: 26.922070, lng: 75.778885 } },
+  { name: 'chandigarh ', location: { lat: 30.7333, lng: 76.7794 } },
+  { name: 'kanpur ', location: { lat: 26.449923, lng: 80.331871 } },
+  { name: 'Lucknow', location: { lat: 26.850000, lng: 80.949997} },
+  { name: 'Hyderabad ', location: { lat: 17.366, lng: 78.476 } },
+  { name: 'Chennai ', location: { lat: 13.0827, lng: 80.2707 } },
+  { name: 'Cuttack', location: { lat: 20.4625, lng: 85.8830 } },
+  { name: 'Aurangabad', location: { lat: 19.8762, lng: 75.3433 } },
 ];
 
 function GoogleMapcom() {
