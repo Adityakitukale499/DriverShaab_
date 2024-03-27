@@ -94,7 +94,7 @@ const teamMembers = [
       }]
   },
   {
-    name: 'Poulami Chaterjee',
+    name: 'Poulami Chatterjee',
     designation: 'Head of Marketing',
     imageSrc: 'poulami.jpg',
     socialLinks: [

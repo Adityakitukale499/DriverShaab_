@@ -4,6 +4,7 @@ import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
 import { ref, set } from "firebase/database";
 import { db } from "../firebase.config";
+import GoogleMapcom from "./GoogleMapcom";
 
 
 // const ContactSection = () => {
@@ -282,7 +283,7 @@ const ContactSection = () => {
                         <img src="email.png" className="contactus_img" />
                         <p className="contactus_address_heading">Email Id </p>
                       </div>
-                      <p className="contactus_address"> info@drivershaab.com</p>
+                      <p className="contactus_address">info@drivershaab.com</p>
                     </div>
                     <div className="address_text">
                       <div className="heading_img_container">
@@ -339,6 +340,7 @@ const ContactSection = () => {
 
           </div>
         </div>
+        <GoogleMapcom/>
         {/* End Contact Section */}
       </div>
     </>

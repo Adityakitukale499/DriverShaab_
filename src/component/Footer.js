@@ -70,22 +70,22 @@ const Footer = () => {
                 <div className="widget about-widget">
                   <ul className="social-links">
                     <li>
-                      <a href="#">
+                      <a href="https://twitter.com/DriverShaab">
                         <i className="fab fa-twitter"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.facebook.com/drivershaabApp/">
                         <i className="fab fa-facebook-f"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
-                        <i className="fab fa-pinterest-p"></i>
+                      <a href="https://www.linkedin.com/company/drivershaab/">
+                        <i className="fab fa-linkedin"></i>
                       </a>
                     </li>
                     <li>
-                      <a href="#">
+                      <a href="https://www.instagram.com/drive.rshaab/">
                         <i className="fab fa-instagram"></i>
                       </a>
                     </li>
@@ -112,7 +112,7 @@ const Footer = () => {
         <div className="auto-container">
           <div className="wrapper-box">
             <div className="copyright">
-              <div className="text" style={{textAlign:'center'}}>@copyright <br /> change it to all rights reserved to <br />SATADRU TECHNOLOGIES PRIVATE LIMITED </div>
+              <div className="text" style={{textAlign:'center'}}>@copyright <br />SATADRU TECHNOLOGIES PRIVATE LIMITED </div>
             </div>
             <div className="logo">
               <img src="unnamed.png" alt="" style={{height:'60px'}} />
