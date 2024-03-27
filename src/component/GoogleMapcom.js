@@ -8,8 +8,8 @@ const containerStyle = {
 };
 
 const center = {
-  lat: 18.516726,
-  lng: 73.856255
+  lat: 22.520039261798022,
+  lng: 88.38308769624192
 };
 
 // Define an array of marker positions
@@ -30,8 +30,8 @@ function GoogleMapcom() {
 
   const onLoad = React.useCallback(function callback(map) {
     // This is just an example of getting and using the map instance!!! don't just blindly copy!
-    const bounds = new window.google.maps.LatLngBounds(center);
-    map.fitBounds(bounds);
+    // const bounds = new window.google.maps.LatLngBounds(center);
+    // map.fitBounds(bounds);
 
     setMap(map);
   }, []);
@@ -43,8 +43,10 @@ function GoogleMapcom() {
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={containerStyle}
-      // center={center}
-      zoom={2}
+      center={center}
+      zoom={4}
+      // mapTypeId="satellite"
+      defaultZoom={1}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >

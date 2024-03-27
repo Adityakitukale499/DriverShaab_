@@ -66,7 +66,7 @@ const teamMembers = [
     designation: 'Head of Procurement',
     imageSrc: 'nehaupdated.jpg',
     socialLinks: [
-      { url: 'https://www.linkedin.com/in/daisy-saikia-16072211a', icon: 'LinkedInIcon' },
+      { url: 'https://www.linkedin.com/in/neha-shaikh-8294b1b8/', icon: 'LinkedInIcon' },
       { url: 'mailto:neha.shaikh@drivershaab.com', icon: 'MailOutlineIcon' },
       { url: '#', icon: 'FacebookIcon'},
     ],
