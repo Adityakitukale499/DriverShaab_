@@ -43,7 +43,7 @@ const App = () => {
               <Route path="/querysubmit" element={<SubmitedQuery />} />
               <Route path="/querys" element={<UsersQuery />} />
             </Routes>
-            <Footer />
+             {location.pathname != '/querysubmit' && <Footer />}
 
         </div>}
     </div>

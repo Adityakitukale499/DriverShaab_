@@ -5,6 +5,7 @@ import "../Assets/css/responsive.css";
 import { ref, set } from "firebase/database";
 import { db } from "../firebase.config";
 import GoogleMapcom from "./GoogleMapcom";
+import { useNavigate } from "react-router-dom";
 
 
 // const ContactSection = () => {
@@ -212,6 +213,7 @@ const ContactSection = () => {
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
+  const navigate = useNavigate()
 
 
   const submit = (e) => {
@@ -230,6 +232,8 @@ const ContactSection = () => {
     setEmail('')
     setMessage('')
     setName('')
+    navigate('/querysubmit')
+
     console.log('succsesfull')
   };
   return (

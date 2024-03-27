@@ -8,15 +8,16 @@ const containerStyle = {
 };
 
 const center = {
-  lat: -3.745,
-  lng: -38.523
+  lat: 18.516726,
+  lng: 73.856255
 };
 
 // Define an array of marker positions
 const markerPositions = [
-  { lat: -3.745, lng: -38.523 },
-  { lat: -3.755, lng: -38.533 },
-  // Add more marker positions as needed
+  { name: 'Kolkata', location: { lat: 22.520039261798022, lng: 88.38308769624192 } },
+  { name: 'mumbai', location: { lat: 19.0760, lng: 72.8777 } },
+  { name: 'pune', location: { lat: 18.516726, lng: 73.856255 } },
+  { name: 'nagpur', location: { lat: 21.1458, lng: 79.0882 } },
 ];
 
 function GoogleMapcom() {
@@ -42,15 +43,16 @@ function GoogleMapcom() {
   return isLoaded ? (
     <GoogleMap
       mapContainerStyle={containerStyle}
-      center={center}
-      zoom={5}
+      // center={center}
+      zoom={2}
       onLoad={onLoad}
       onUnmount={onUnmount}
     >
-      {/* Render markers dynamically */}
-      {markerPositions.map((position, index) => (
-        <Marker key={index} position={position} />
-      ))}
+      {markerPositions.map((position, index) => {
+        return <div key={Math.random}>
+          <Marker position={position.location}/>
+        </div>
+      })}
     </GoogleMap>
   ) : <></>;
 }
