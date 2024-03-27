@@ -47,20 +47,6 @@ export default function UsersQuery() {
 
     return (
         <>
-            {/* <Box
-        sx={{
-          display: "flex",
-          justifyContent: "end",
-          alignItems: "end",
-          width: "95%",
-          py: 2,
-        }}
-      >
-        {" "}
-        <Button variant="contained" onClick={logOut}>
-          Log out
-        </Button>
-      </Box> */}
             <Box
                 sx={{
                     display: "flex",
@@ -70,10 +56,8 @@ export default function UsersQuery() {
                     my: 2,
                 }}
             >
-                <Typography variant="h5" my={2} color="initial">
+                <Typography variant="h4" my={2} color="initial">
                     Visitores Querys
-                    {/* <br />
-          <img src="Vector.png" alt="image" /> */}
                 </Typography>
                 <Paper sx={{ width: "90%" }}>
                     <TableContainer sx={{ height: 440 }}>
@@ -84,7 +68,7 @@ export default function UsersQuery() {
                                         <TableCell
                                             key={column.id}
                                             align={column.align}
-                                            style={{ minWidth: column.minWidth }}
+                                            style={{ minWidth: column.minWidth, fontSize: 14  }}
                                         >
                                             {column.label}
                                         </TableCell>
@@ -105,7 +89,7 @@ export default function UsersQuery() {
                                                 {columns.map((column) => {
                                                     const value = row[column.id];
                                                     return (
-                                                        <TableCell key={column.id} align={column.align}>
+                                                        <TableCell key={column.id} align={column.align} sx={{fontSize:12}}>
                                                             {value ? value : "-"}
                                                         </TableCell>
                                                     );

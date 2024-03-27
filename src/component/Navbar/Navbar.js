@@ -8,7 +8,6 @@ import {
   MenuItem,
   Drawer,
   Breadcrumbs,
-  ListItem,
   useMediaQuery,
   Button,
   Box,
@@ -74,6 +73,7 @@ const App = () => {
           {isDesktop ? (
             <Breadcrumbs>
               <NavLink
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 to="/"
                 style={({ isActive }) => ({
                   color: isActive ? '#FB561E' : '#ffff',
@@ -86,6 +86,7 @@ const App = () => {
                 Home
               </NavLink>
               <NavLink
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 to="/aboutus"
                 style={({ isActive }) => ({
                   color: isActive ? '#FB561E' : '#ffff',
@@ -98,6 +99,7 @@ const App = () => {
                 About
               </NavLink>
               <NavLink
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 to="/careers"
                 style={({ isActive }) => ({
                   color: isActive ? '#FB561E' : '#ffff',
@@ -120,13 +122,17 @@ const App = () => {
                   fontSize: "18px",
                   textDecoration: 'none'
                 })}
-                onClick={() => setAnchorEl(null)}
+                onClick={() => {
+                  setAnchorEl(null)
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }}
               >
                 Services{" "}
                 {anchorEl ? <ArrowDropDownIcon /> : <ArrowDropUpIcon />}
               </NavLink>
 
               <NavLink
+                onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                 to="/contactus"
                 style={({ isActive }) => ({
                   color: isActive ? '#FB561E' : '#ffff',

@@ -12,7 +12,6 @@ const center = {
   lng: 88.38308769624192
 };
 
-// Define an array of marker positions
 const markerPositions = [
   { name: 'Kolkata', location: { lat: 22.520039261798022, lng: 88.38308769624192 } },
   { name: 'mumbai', location: { lat: 19.0760, lng: 72.8777 } },
