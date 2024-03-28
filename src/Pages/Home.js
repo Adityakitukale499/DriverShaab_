@@ -12,6 +12,7 @@ import ContactSection from "../component/ContactSection";
 import FaqSection from "../component/FaqSection";
 import Location from "../component/Location"
 import MissionVision from "../component/MissionVision";
+import OurCustomer from "../component/OurCustomer";
 
 
 
@@ -28,6 +29,7 @@ const Home = () => {
       <TeamSection />
       <MissionVision/>
       <AppSection />
+      <OurCustomer/>
       <TestimonialsSection />
       <ContactSection />
       <FaqSection />
