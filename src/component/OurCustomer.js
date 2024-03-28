@@ -28,10 +28,10 @@ const responsive = {
 
 const OurCustomer = () => {
     return (
-        <Box sx={{ px: { lg: 17, md: 8, xs: 2 }, my: 3}}>
+        <Box sx={{ px: { lg: 17, md: 8, xs: 2 }, my: 5}}>
 
             <Typography
-                mb={5}
+                mb={2}
                 sx={{
                     textAlign: "center",
                     fontWeight: 500,
