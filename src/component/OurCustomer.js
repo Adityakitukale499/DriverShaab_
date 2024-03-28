@@ -144,7 +144,7 @@ const OurCustomer = () => {
                         />
                         <CardContent>
                             <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
-                            ⁠Go EV mobility
+                            ⁠Go EV Mobility
                             </Typography>
                         </CardContent>
                     </CardActionArea>
