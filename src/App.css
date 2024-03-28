@@ -24,3 +24,10 @@ input[type="file"]::file-selector-button {
     height: 280px;
   }
 }
+
+@media screen and (max-width: 1000px) {
+  .ytvideo{
+    width: 70vw;
+    height: 400px;
+  }
+}
