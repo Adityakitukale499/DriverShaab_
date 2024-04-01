@@ -16,21 +16,27 @@ import Careers from "./Pages/Careers";
 import './App.css'
 import Footer from "./component/Footer";
 import SplashScreen from "./component/SplashScreen";
-import { useState } from "react";
+import { createContext, useRef, useState } from "react";
 import SubmitedQuery from "./component/SubmitedQuery";
 import { db } from "./firebase.config";
 import UsersQuery from "./component/UserQuery";
 
+export const ScheduledemoContext = createContext()
+
 const App = () => {
   const [splash, setSplash] = useState(true)
+  const [scheduledemo, setScheduledemo] = useState(false)
+
   const location = useLocation()
   console.log(db)
 
+
   return (
     <div>
-      {splash ? <SplashScreen setSplash={setSplash} /> :
-        <div style={{ marginTop: '20px' }}>
-             {location.pathname != '/querysubmit' && <Navbar />}
+      <ScheduledemoContext.Provider value={{scheduledemo , setScheduledemo}}>
+        {splash ? <SplashScreen setSplash={setSplash} /> :
+          <div style={{ marginTop: '20px' }}>
+            {location.pathname != '/querysubmit' && <Navbar />}
             <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/aboutus" element={<AboutUs />} />
@@ -43,9 +49,9 @@ const App = () => {
               <Route path="/querysubmit" element={<SubmitedQuery />} />
               <Route path="/querys" element={<UsersQuery />} />
             </Routes>
-             {location.pathname != '/querysubmit' && <Footer />}
-
-        </div>}
+            {location.pathname != '/querysubmit' && <Footer />}
+          </div>}
+      </ScheduledemoContext.Provider>
     </div>
   );
 };

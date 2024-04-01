@@ -20,7 +20,7 @@ const SubmitedQuery = () => {
                 <Box >
                     <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 700, fontSize: '70px', lineHeight: '42px', color: '#FB561E' }}>Done! <img src="greencheck.png" alt="green tick" style={{ height: '60px' }} /> </Typography>
                     <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 500, fontSize: '28px', lineHeight: '26px' }}>
-                      One step forword to get the right Driver with Drivershaab.
+                      One step forword to get the right Driver with DriverShaab.
                     </Typography>
                 </Box>
                 <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 400, fontSize: '22px', lineHeight: '26px', mb: 3, }}>
@@ -28,7 +28,7 @@ const SubmitedQuery = () => {
                     Feel free to drop an email to <span style={{ color: '#FB561E' }} onClick={()=> window.location.href = 'mailto:info@drivershaab.com'}> info@drivershaab.com</span> if you have any additional queries.
                 </Typography>
                 <Typography sx={{ fontFamily: 'Work Sans', fontWeight: 400, fontSize: '20px', lineHeight: '26px', }}>
-                    To receive latest updates from DirverShaab, be sure to follow us on:
+                    To receive latest updates from DriverShaab, be sure to follow us on:
                     <Box sx={{display:'flex', alignItems:'center',gap:1,fontSize:'17px',mt:1}}>
                         <a href="https://www.linkedin.com/company/drivershaab/" style={{display:'flex', alignItems:'center'}}>
                       <LinkedInIcon sx={{color:'blue', fontSize:35}}/> Linkedin </a>
@@ -41,7 +41,7 @@ const SubmitedQuery = () => {
                         color: '#fff',
                         backgroundColor: '#FB461E'
                     }, textTransform: 'none',width:'270px'
-                }} startIcon={<ArrowCircleLeftOutlinedIcon/>} onClick={()=> navigate(-1)}>Go Back to DirverShaab</Button>
+                }} startIcon={<ArrowCircleLeftOutlinedIcon/>} onClick={()=> navigate(-1)}>Go Back to DriverShaab</Button>
             </Box>
         </Box>
     )

@@ -13,8 +13,8 @@ input[type="file"]::file-selector-button {
 }
 
 .ytvideo{
-  width: 50vw;
-  height: 500px;
+  width: 80vw;
+  height: 550px;
 }
 
 
@@ -27,7 +27,7 @@ input[type="file"]::file-selector-button {
 
 @media screen and (max-width: 1000px) {
   .ytvideo{
-    width: 70vw;
+    /* width: 70vw; */
     height: 400px;
   }
 }

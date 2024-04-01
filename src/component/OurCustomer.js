@@ -224,6 +224,21 @@ const OurCustomer = () => {
                         </CardContent>
                     </CardActionArea>
                 </Card>
+                <Card sx={{ width: 250 , mb:5, mx:'auto'}}>
+                    <CardActionArea>
+                        <CardMedia
+                            component="img"
+                            image="customers/Routematic.jpeg"
+                            alt="green iguana"
+                            sx={{height:140,p:1}}
+                        />
+                        <CardContent>
+                            <Typography gutterBottom variant="h5" component="div" textAlign={'center'}>
+                            Routematic
+                            </Typography>
+                        </CardContent>
+                    </CardActionArea>
+                </Card>
             </Carousel>
         </Box>
     );

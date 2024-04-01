@@ -7,24 +7,51 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TablePagination from "@mui/material/TablePagination";
 import TableRow from "@mui/material/TableRow";
-import { Box, Typography } from "@mui/material";
+import { Box, MenuItem, Select, Typography } from "@mui/material";
 import { get, ref } from "firebase/database";
 import { db } from "../firebase.config";
 
-const columns = [
-    { id: "name", label: "Name", minWidth: 0, align: "center" },
-    { id: "email", label: "Email", minWidth: 0, align: "center" },
-    { id: "message", label: "Message", minWidth: 0, align: "center" },
-    { id: "timeStamp", label: "Date & Time", minWidth: 0, align: "center" },
-];
 
 export default function UsersQuery() {
+    const [applications, setApplications] = React.useState([
+        { id: "name", label: "Name", minWidth: 0, align: "center" },
+        { id: "email", label: "Email", minWidth: 0, align: "center" },
+        { id: "contactNo", label: "Contact", minWidth: 0, align: "center" },
+        { id: "city", label: "City", minWidth: 0, align: "center" },
+        { id: "roles", label: "Roles", minWidth: 0, align: "center" },
+        { id: "additionalInfo", label: "Message", minWidth: 0, align: "center" },
+        { id: "timeStamp", label: "Date & Time", minWidth: 0, align: "center" },
+    ])
+    const [demoRequest , setDemoRequest] = React.useState([
+        { id: "name", label: "Name", minWidth: 0, align: "center" },
+        { id: "email", label: "Email", minWidth: 0, align: "center" },
+        { id: "contactNo", label: "Contact", minWidth: 0, align: "center" },
+        { id: "city", label: "City", minWidth: 0, align: "center" },
+        { id: "additionalInfo", label: "Message", minWidth: 0, align: "center" },
+        { id: "timeStamp", label: "Date & Time", minWidth: 0, align: "center" },
+    ])
+    const [query , setQuery] = React.useState([
+        { id: "name", label: "Name", minWidth: 0, align: "center" },
+        { id: "email", label: "Email", minWidth: 0, align: "center" },
+        { id: "message", label: "Message", minWidth: 0, align: "center" },
+        { id: "timeStamp", label: "Date & Time", minWidth: 0, align: "center" },
+    ])
+    const [columns , setColumns] = React.useState([
+        { id: "name", label: "Name", minWidth: 0, align: "center" },
+        { id: "email", label: "Email", minWidth: 0, align: "center" },
+        { id: "message", label: "Message", minWidth: 0, align: "center" },
+        { id: "timeStamp", label: "Date & Time", minWidth: 0, align: "center" },
+    ])
+    const [select, setSelect] = React.useState('Querys')
     const [data, setData] = React.useState([]);
     const [page, setPage] = React.useState(0);
     const [rowsPerPage, setRowsPerPage] = React.useState(10);
     React.useEffect(() => {
+        if(select == 'Applications') setColumns(applications)
+        if(select == 'DemoRequests') setColumns(demoRequest)
+        if(select == 'Querys') setColumns(query)
         const fetchData = async () => {
-            const queryref = ref(db, 'Querys')
+            const queryref = ref(db, select)
             try {
                 const snapshot = await get(queryref)
                 const temp = Object.values(snapshot.val());
@@ -35,7 +62,7 @@ export default function UsersQuery() {
             }
         }
         fetchData()
-    }, [])
+    }, [select])
     const handleChangePage = (event, newPage) => {
         setPage(newPage);
     };
@@ -57,8 +84,18 @@ export default function UsersQuery() {
                 }}
             >
                 <Typography variant="h4" my={2} color="initial">
-                    Visitores Querys
+                    Visitores Querys 
                 </Typography>
+      <Select
+        labelId="demo-select-small-label"
+        id="demo-select-small"
+        value={select}
+        onChange={(e)=> setSelect(e.target.value)}
+      >
+        <MenuItem value={'Applications'}>Applications</MenuItem>
+        <MenuItem value={'DemoRequests'}>Demo Requests</MenuItem>
+        <MenuItem value={'Querys'}>Querys</MenuItem>
+      </Select>
                 <Paper sx={{ width: "90%" }}>
                     <TableContainer sx={{ height: 440 }}>
                         <Table stickyHeader aria-label="sticky table">
