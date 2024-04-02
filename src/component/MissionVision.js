@@ -25,11 +25,11 @@ const MissionVision = () => {
                     WebkitTextFillColor: 'transparent',
                     backgroundImage: '-webkit-linear-gradient(#eee, #fff)',
                 }}>
-                    " where convenience meets reliability. " <br />
-                    " Our mission is to connect drivers with passengers seamlessly.
-                    With a focus on passenger's safety and driver livelihoods ,we empower drivers to maximize their earnings while providing passengers with a reliable and affordable transportation option." <br />
-                    " Join us in reshaping urban mobility—one ride at a time." <br />
-                    " DriverShaab: Your car, Your Driver. "</Typography>
+                    where convenience meets reliability. <br />
+                    Our mission is to connect drivers with passengers seamlessly.
+                    With a focus on passenger's safety and driver livelihoods ,we empower drivers to maximize their earnings while providing passengers with a reliable and affordable transportation option. <br />
+                    Join us in reshaping urban mobility—one ride at a time.<br />
+                    DriverShaab: Your car, Your Driver.</Typography>
                 <Typography sx={{
                     fontFamily: 'Work Sans', fontWeight: 700, fontSize: '36px', lineHeight: '42px', color: '#fff', textAlign: 'center', WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
@@ -40,7 +40,7 @@ const MissionVision = () => {
                     WebkitTextFillColor: 'transparent',
                     backgroundImage: '-webkit-linear-gradient(#eee, #fff)',
                 }}>
-                    " India’s Largest Technology enabled Driver Partner Market place "</Typography>
+                    India’s Largest Technology enabled Driver Partner Market place</Typography>
 
 
 
@@ -55,7 +55,7 @@ const MissionVision = () => {
                     WebkitTextFillColor: 'transparent',
                     backgroundImage: '-webkit-linear-gradient(#eee, #fff)',
                 }}>
-                    " To continuously improve, innovate and revolutionize the Driver partner ecosystem "</Typography>
+                     To continuously improve, innovate and revolutionize the Driver partner ecosystem </Typography>
             </Box>
         </Box>
     )
