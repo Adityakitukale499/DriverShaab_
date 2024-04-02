@@ -20,7 +20,7 @@ const AppSection = () => {
 
             <Typography sx={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '15px', lineHeight: '0px', color: '#FB561E', mb: 1 }}>Choose your platform and get started</Typography>
 
-            <Typography sx={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '18px', lineHeight: '27px', my: 2 }}>Summus sit​​, morbo vel maleficia? De Apocalypsi undead dictum mauris. Hi mortuis soulless creaturas, monstra adventus vultus comedat cerebella viventium. Qui offenderit rapto, terribilem incessu. The voodoo sacerdos suscitat mortuos come dere carnem. Search for solum oculi eorum defunctis cerebro.</Typography>
+            <Typography sx={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '18px', lineHeight: '27px', my: 2 }}>Experience the future of transportation at your fingertips! With the Drivershaab app officially launched, seamless rides and dependable service are just a tap away. Join us in revolutionizing travel with a focus on safety, reliability, and driver empowerment. Don't wait – download the app now and embark on a journey where convenience meets peace of mind.</Typography>
 
             <Box sx={{ display: 'flex', flexDirection: isDesktop? "row":'column', gap: 2, color: '#FB561E', alignItems: 'start', justifyContent: 'start', marginX: 'auto' }}>
               <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
