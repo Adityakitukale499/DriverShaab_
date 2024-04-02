@@ -1,13 +1,17 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useContext } from "react";
 import "../../Assets/css/style.css";
 import "../../Assets/css/bootstrap.css";
 import "../../Assets/css/responsive.css";
 import line from "../../Assets/images/line.png";
 import "../../Animation.css";
+import { useNavigate } from "react-router-dom";
+import { ScheduledemoContext } from "../../App";
 
 const AboutSection = () => {
   const fleep1Ref = useRef(null);
   const [fleep1Visible, setFleep1Visible] = useState(false);
+  const navigate = useNavigate()
+  const { scheduledemo, setScheduledemo } = useContext(ScheduledemoContext)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -79,7 +83,10 @@ const AboutSection = () => {
               </div>
             </div>
             <div className={`about_us_btn ${fleep1Visible ? 'hero-animation' : ''}`}>
-              <a href="#" className="book-btn theme-btn btn-style-three" style={{textTransform:'none'}}>
+              <a href="#" className="book-btn theme-btn btn-style-three" style={{textTransform:'none'}} onClick={() => {
+            setScheduledemo(true)
+            navigate('/businesses')
+          }}>
                 Schedule Demo (B2B)
               </a>
             </div>
