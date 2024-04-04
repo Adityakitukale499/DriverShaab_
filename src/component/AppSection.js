@@ -6,9 +6,11 @@ import AppleIcon from '@mui/icons-material/Apple';
 
 
 import '../Assets/css/responsive.css'
+import { useNavigate } from 'react-router-dom';
 
 const AppSection = () => {
   const isDesktop = useMediaQuery('(min-width:600px)');
+  const navigate = useNavigate()
 
   return (
     <>
@@ -23,13 +25,13 @@ const AppSection = () => {
             <Typography sx={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '18px', lineHeight: '27px', my: 2 }}>Experience the future of transportation at your fingertips! With the Drivershaab app officially launched, seamless rides and dependable service are just a tap away. Join us in revolutionizing travel with a focus on safety, reliability, and driver empowerment. Don't wait – download the app now and embark on a journey where convenience meets peace of mind.</Typography>
 
             <Box sx={{ display: 'flex', flexDirection: isDesktop? "row":'column', gap: 2, color: '#FB561E', alignItems: 'start', justifyContent: 'start', marginX: 'auto' }}>
-              <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
+              <Box onClick={()=> window.open('https://play.google.com/store/apps/details?id=com.drivershaabb2b&pcampaignid=web_share')} sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
                 <AdbIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Android</Typography>
                 </Box>
               </Box>
-              <Box sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
+              <Box onClick={()=> window.open('https://apps.apple.com/in/app/drivershaab-driver-booking-app/id1554256913')} sx={{ borderRadius: 13, px: 3, py: 1, border: '2px solid #FB561E', display: 'flex', gap: 2, color: '#FB561E', alignItems: 'center', cursor: 'pointer' }}>
                 <AppleIcon sx={{ height: '51px', fontSize: 50 }} /> <Box>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 400, fontSize: '18px', lineHeight: '27px' }}>Download for</Typography>
                   <Typography sx={{ fontFamily: 'Inter', fontWeight: 700, fontSize: '24px', lineHeight: '36px' }}>Apple IOS</Typography>

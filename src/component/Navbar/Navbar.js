@@ -160,6 +160,7 @@ const App = () => {
                     backgroundColor: '#FB461E'
                   },
                 }}
+                onClick={()=> window.open('https://play.google.com/store/apps/details?id=com.drivershaabb2b&pcampaignid=web_share')}
               >
                 Download DriverShaab
               </Button>
