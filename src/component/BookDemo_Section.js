@@ -22,8 +22,8 @@ const BookDemo_Section = () => {
             setScheduledemo(true)
             navigate('/businesses')
           }}>
-            <a className="theme-btn btn-style-one">
-              BOOK DEMO
+            <a className="theme-btn btn-style-one" >
+              Book Demo
             </a>
           </div>
         </div>

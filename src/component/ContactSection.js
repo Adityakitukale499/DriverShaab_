@@ -124,12 +124,12 @@ const ContactSection = () => {
                           info@drivershaab.com{" "}
                         </p>
                         <IconButton
-                          sx={{ mt: -1.5 }}
+                          sx={{ mt: -1}}
                           onClick={() =>
                             copyToClipBoard("info@drivershaab.com")
                           }
                         >
-                          <ContentCopyIcon />
+                          <ContentCopyIcon sx={{fontSize:'13px' }} />
                         </IconButton>
                       </div>
                     </div>
@@ -149,10 +149,10 @@ const ContactSection = () => {
                           8929000462
                         </p>
                         <IconButton
-                          sx={{ mt: -1.5 }}
+                          sx={{ mt: -1}}
                           onClick={() => copyToClipBoard("8929000462")}
                         >
-                          <ContentCopyIcon />
+                          <ContentCopyIcon sx={{fontSize:'13px' }} />
                         </IconButton>
                       </div>
                     </div>
@@ -214,7 +214,7 @@ const ContactSection = () => {
                           name="submit-form"
                           // style={{paddingBottom:20}}
                         >
-                          SUBMIT
+                          Submit
                         </button>
                       </div>
                     </div>

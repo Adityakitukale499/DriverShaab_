@@ -121,6 +121,8 @@ const App = () => {
                   fontWeight: 400,
                   fontSize: "18px",
                   textDecoration: 'none'
+                  ,display:'flex',
+                  alignItems:'center'
                 })}
                 onClick={() => {
                   setAnchorEl(null)
