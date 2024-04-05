@@ -14,6 +14,11 @@ const ContactSection = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+  function isMobileDevice() {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  }
 
   const submit = (e) => {
     e.preventDefault();
@@ -110,7 +115,9 @@ const ContactSection = () => {
                           style={{ cursor: "pointer" }}
                           onClick={() =>
                             window.open(
-                              "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@drivershaab.com"
+                              isMobileDevice()
+                                ? "mailto:info@drivershaab.com"
+                                : "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=info@drivershaab.com"
                             )
                           }
                         >
