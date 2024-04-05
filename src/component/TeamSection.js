@@ -7,12 +7,13 @@ import BubbleLayout from "./BubbleLayout/BubbleLayout";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
+import Tooltip from '@mui/material/Tooltip';
 
-function isMobileDevice() {
-  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-    navigator.userAgent
-  );
-}
+// function isMobileDevice() {
+//   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+//     navigator.userAgent
+//   );
+// }
 const TeamSection = () => {
   return (
     <div style={{ position: "relative" }}>
@@ -59,6 +60,7 @@ const TeamSection = () => {
                         <ul className="social-links">
                           {member.socialLinks.map((link, i) => (
                             <li key={`socialLinks${Math.random()}`}>
+                              <Tooltip title={link.icon == 'MailOutlineIcon'? link.url.split(':')[1] : link.url}> 
                               <a
                                 href={link.url}
                                 target="_blank"
@@ -78,7 +80,7 @@ const TeamSection = () => {
                                 {link.icon === "FacebookIcon" && (
                                   <FacebookIcon sx={{ fontSize: "20px" }} />
                                 )}
-                              </a>
+                              </a></Tooltip>
                             </li>
                           ))}
                         </ul>
@@ -107,9 +109,7 @@ const teamMembers = [
         icon: "LinkedInIcon",
       },
       {
-        url: isMobileDevice()
-          ? "mailto:neha.shaikh@drivershaab.com"
-          : "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=neha.shaikh@drivershaab.com",
+        url:  "mailto:neha.shaikh@drivershaab.com",
         icon: "MailOutlineIcon",
       },
       // { url: '#', icon: 'FacebookIcon'},
@@ -125,9 +125,7 @@ const teamMembers = [
         icon: "LinkedInIcon",
       },
       {
-        url: isMobileDevice()
-        ? "mailto:arpit.sinha@drivershaab.com"
-        : "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=arpit.sinha@drivershaab.com",
+        url:  "mailto:arpit.sinha@drivershaab.com",
         icon: "MailOutlineIcon",
       },
       // {    url: '#', icon: 'FacebookIcon' }
@@ -143,9 +141,7 @@ const teamMembers = [
         icon: "LinkedInIcon",
       },
       {
-        url: isMobileDevice()
-        ? "mailto:James.joy@drivershaab.com"
-        : "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=James.joy@drivershaab.com",
+        url:  "mailto:James.joy@drivershaab.com",
         icon: "MailOutlineIcon",
       },
       // { url: '#', icon: 'FacebookIcon' }
@@ -161,9 +157,7 @@ const teamMembers = [
         icon: "LinkedInIcon",
       },
       {
-        url: isMobileDevice()
-        ? "mailto:Poulami.chatterjee@drivershaab.com"
-        : "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Poulami.chatterjee@drivershaab.com",
+        url:  "mailto:Poulami.chatterjee@drivershaab.com",
         icon: "MailOutlineIcon",
       },
       // { url: '#', icon: 'FacebookIcon' }
@@ -179,9 +173,7 @@ const teamMembers = [
         icon: "LinkedInIcon",
       },
       {
-        url: isMobileDevice()
-        ? "mailto:Anchal.negi@drivershaab.com"
-        : "https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Anchal.negi@drivershaab.com",
+        url:  "mailto:Anchal.negi@drivershaab.com",
         icon: "MailOutlineIcon",
       },
       // { url: '#', icon: 'FacebookIcon' }
