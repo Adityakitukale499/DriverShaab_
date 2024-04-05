@@ -67,7 +67,7 @@ const teamMembers = [
     imageSrc: 'nehaupdated.jpg',
     socialLinks: [
       { url: 'https://www.linkedin.com/in/neha-shaikh-8294b1b8/', icon: 'LinkedInIcon' },
-      { url: 'mailto:neha.shaikh@drivershaab.com', icon: 'MailOutlineIcon' },
+      { url: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=neha.shaikh@drivershaab.com', icon: 'MailOutlineIcon' },
       // { url: '#', icon: 'FacebookIcon'},
     ],
   },
@@ -77,7 +77,7 @@ const teamMembers = [
     imageSrc: 'apritupdated.jpg',
     socialLinks: [
       { url: 'https://www.linkedin.com/in/arpit-sinha-60593834', icon: 'LinkedInIcon' },
-      { url: 'mailto:arpit.sinha@drivershaab.com', icon: 'MailOutlineIcon' },
+      { url: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=arpit.sinha@drivershaab.com', icon: 'MailOutlineIcon' },
       // {    url: '#', icon: 'FacebookIcon' }
     ]
   },
@@ -87,7 +87,7 @@ const teamMembers = [
     imageSrc: 'jamesh.jpg',
     socialLinks: [
       { url: 'https://www.linkedin.com/in/james-joy-a77358241', icon: 'LinkedInIcon' },
-      { url: 'mailto:James.joy@drivershaab.com', icon: 'MailOutlineIcon' },
+      { url: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=James.joy@drivershaab.com', icon: 'MailOutlineIcon' },
       // { url: '#', icon: 'FacebookIcon' }
     ]
   },
@@ -97,7 +97,7 @@ const teamMembers = [
     imageSrc: 'poulami.jpg',
     socialLinks: [
       { url: 'http://www.linkedin.com/in/poulami-chatterjee-b16292174', icon: 'LinkedInIcon' },
-      { url: 'mailto:Poulami.chatterjee@drivershaab.com', icon: 'MailOutlineIcon' },
+      { url: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Poulami.chatterjee@drivershaab.com', icon: 'MailOutlineIcon' },
       // { url: '#', icon: 'FacebookIcon' }
     ]
   },
@@ -107,7 +107,7 @@ const teamMembers = [
     imageSrc: 'anchal.jpg',
     socialLinks: [
       { url: 'https://www.linkedin.com/in/anchal-negi-155562260/', icon: 'LinkedInIcon' },
-      { url: 'mailto:Anchal.negi@drivershaab.com', icon: 'MailOutlineIcon' },
+      { url: 'https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=Anchal.negi@drivershaab.com', icon: 'MailOutlineIcon' },
       // { url: '#', icon: 'FacebookIcon' }
     ]
   }

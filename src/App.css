@@ -18,16 +18,16 @@ input[type="file"]::file-selector-button {
 }
 
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .ytvideo{
     width: 90vw;
-    height: 280px;
+    height: 200px;
   }
 }
 
 @media screen and (max-width: 1000px) {
   .ytvideo{
     /* width: 70vw; */
-    height: 400px;
+    height: 300px;
   }
 }

@@ -9,12 +9,12 @@ import OurCustomer from "../component/OurCustomer";
 const AboutUs = () => {
   return (
     <div>
-      <TeamSection />
       <MissionVision/>
       <OurCustomer/>
-      <AppSection />
+      {/* <AppSection /> */}
       <br />
       <Location />
+      <TeamSection />
     </div>
   );
 };

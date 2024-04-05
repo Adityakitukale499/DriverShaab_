@@ -295,7 +295,7 @@ const App = () => {
           </Collapse>
           <ListItemButton onClick={() => {
             handleDrawerToggle();
-            navigate("/contact");
+            navigate("/contactus");
 
           }}>
             <ListItemText>Contact</ListItemText>

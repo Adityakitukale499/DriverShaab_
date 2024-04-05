@@ -1,7 +1,9 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const Location = () => {
+  const navigate = useNavigate()
   return (
     // <div style={{width:"100vw", display:"flex",alignItems:"center", justifyContent:"center"}}>
     <Box sx={{
@@ -25,6 +27,8 @@ const Location = () => {
               color: '#fff',
               backgroundColor: '#FB461E'
             }, textTransform: 'none'
+          }}  onClick={() => {
+            navigate("/careers");
           }}>Join as Driver Partner</Button>
         </Grid>
         <Grid item lg={6} xs={12}>

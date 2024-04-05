@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Video from "../../component/Video";
 import B2bDriverServices from "../../component/B2bDriverServices";
 import Schedule_Demo from "../../component/Schudule_Demo/Schedule_Demo";
@@ -7,6 +7,7 @@ import Footer from "../../component/Footer";
 import SchuduleDemoForm from "../../component/Schudule_Demo/SchuduleDemoForm";
 import { Grid } from "@mui/material";
 const Businesses = () => {
+  
   return (
     <div
       style={{

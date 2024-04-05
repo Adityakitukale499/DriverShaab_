@@ -14,6 +14,8 @@ const SchuduleDemoForm = () => {
       document.getElementById("scheduledemo").scrollIntoView();
       window.scrollBy(0, -80);
       setScheduledemo(false)
+    }else{
+      window.scrollTo({ top: 0, behavior: 'smooth' })
     }
   }, [])
 
@@ -54,7 +56,7 @@ const SchuduleDemoForm = () => {
   };
 
   return (
-    <Box display={'flex'} justifyContent={'center'} my={2} id='scheduledemo'>
+    <Box display={'flex'} justifyContent={'center'} mt={2} id='scheduledemo'>
       <Grid container maxWidth={'1200px'}>
         <Grid item lg={12} md={12} xs={12} display={'flex'} justifyContent={{ lg: 'end', xs: 'center' }} alignItems={'center'}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: "30px", width: '90vw', maxWidth: "500px" }}>
@@ -76,6 +78,7 @@ const SchuduleDemoForm = () => {
                     onChange={handleChange}
                     variant="outlined"
                     fullWidth
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -85,6 +88,7 @@ const SchuduleDemoForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -94,6 +98,7 @@ const SchuduleDemoForm = () => {
                     name="contactNo"
                     value={formData.contactNo}
                     onChange={handleChange}
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -103,6 +108,7 @@ const SchuduleDemoForm = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -114,11 +120,13 @@ const SchuduleDemoForm = () => {
                     name="additionalInfo"
                     value={formData.additionalInfo}
                     onChange={handleChange}
+                    sx={{'& .css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
                   <Button
                     type="submit"
                     variant="contained"
                     className="join-as-driver-btn"
+                    sx={{fontSize:"15px", textTransform:'none'}}
                   >
                     Schedule Demo
                   </Button>

@@ -7,6 +7,9 @@ import { useNavigate } from 'react-router-dom';
 
 
 const Careers = () => {
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  },[])
 
   const states = [
     'Andhra Pradesh',
@@ -83,7 +86,7 @@ const Careers = () => {
 
 
   return (
-    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} mt={3} mb={15} >
+    <Box display={'flex'} justifyContent={'center'} alignItems={'center'} mt={3} mb={5} >
       <Grid container maxWidth={'1200px'}>
         <Grid item lg={12} md={12} xs={12} display={'flex'} justifyContent={'center'} alignItems={'center'}>
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: "30px" }}>
@@ -91,7 +94,7 @@ const Careers = () => {
               <p className="join-as-driver-heading">We are glad you wish to join us!</p>
 
               <div className="joinasdriver_form" >
-                <form onSubmit={handleSubmit} className="scheduledemo_form" style={{ width: '100%' }}>
+                <form onSubmit={handleSubmit} className="scheduledemo_form" style={{ width: '100%'}}>
 
                   <FormControl>
                     <InputLabel id="demo-select-small-label1">Roles</InputLabel>
@@ -104,6 +107,7 @@ const Careers = () => {
                       name='roles'
                       onChange={handleChange}
                       required
+                      sx={{fontSize:'15px'}}
                     >
                       <MenuItem value={'For Driver Partner'}>{'For Driver Partner'}</MenuItem>
                       <MenuItem value={'For Other Roles'}>{'For Other Roles'}</MenuItem>
@@ -115,8 +119,9 @@ const Careers = () => {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    variant="outlined"
+                    // variant="outlined"
                     fullWidth
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -127,6 +132,7 @@ const Careers = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -137,6 +143,7 @@ const Careers = () => {
                     name="contactNo"
                     value={formData.contactNo}
                     onChange={handleChange}
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
                   <FormControl >
                     <InputLabel id="demo-select-small-label2">State</InputLabel>
@@ -149,7 +156,7 @@ const Careers = () => {
                       label='State'
                       name='state'
                       onChange={handleChange}
-                    >
+                      sx={{fontSize:'15px'}}                    >
 
                       {/* <MenuItem value={''}>{'state'}</MenuItem> */}
                       {states.map((state) => (
@@ -165,6 +172,7 @@ const Careers = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
+                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
 
                   <TextField
@@ -177,12 +185,13 @@ const Careers = () => {
                     name="additionalInfo"
                     value={formData.additionalInfo}
                     onChange={handleChange}
+                    sx={{'& .css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
                   />
                   <Button
                     type="submit"
                     variant="contained"
                     className="join-as-driver-btn"
-                    sx={{ mt: 3 }}
+                    sx={{ fontSize:'14px' }}
                   >
                     Submit
                   </Button>

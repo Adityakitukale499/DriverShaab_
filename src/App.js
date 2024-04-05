@@ -16,7 +16,7 @@ import Careers from "./Pages/Careers";
 import './App.css'
 import Footer from "./component/Footer";
 import SplashScreen from "./component/SplashScreen";
-import { createContext, useRef, useState } from "react";
+import { createContext, useEffect, useRef, useState } from "react";
 import SubmitedQuery from "./component/SubmitedQuery";
 import { db } from "./firebase.config";
 import UsersQuery from "./component/UserQuery";
@@ -30,6 +30,9 @@ const App = () => {
   const location = useLocation()
   console.log(db)
 
+  useEffect(()=>{
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  },[])
 
   return (
     <div>

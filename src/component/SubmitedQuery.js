@@ -1,5 +1,5 @@
 import { Box, Button, Grid, Typography } from '@mui/material'
-import React from 'react'
+import React, { useEffect } from 'react'
 import TwitterIcon from '@mui/icons-material/Twitter';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -8,6 +8,9 @@ import { useNavigate } from 'react-router-dom';
 
 const SubmitedQuery = () => {
     const navigate = useNavigate()
+    useEffect(()=>{
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+      },[])
     return (
         <Box sx={{
             // backgroundImage: "url(" + "missionback.png" + ")",

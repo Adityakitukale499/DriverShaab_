@@ -141,7 +141,8 @@ const Footer = () => {
             <div className="copyright">
               <div className="text" style={{ textAlign: "center" }}>
                 @copyright <br />
-                SATADRU TECHNOLOGIES PRIVATE LIMITED{" "}
+                {/* SATADRU TECHNOLOGIES PRIVATE LIMITED{" "} */}
+                © 2023 Satadru Technologies PVT LTD. All right reserved.
               </div>
             </div>
             <div className="logo">
@@ -150,13 +151,16 @@ const Footer = () => {
             <div className="footer-menu">
               <ul>
                 <li>
-                  <a href="#">Terms & Condition</a>
+                  <a>Terms & Condition</a>
                 </li>
                 <li>
-                  <a href="#">Privacy Policy</a>
+                  <a>Refund Policy</a>
                 </li>
                 <li>
-                  <a href="#">Help</a>
+                  <a>Privacy Policy</a>
+                </li>
+                <li>
+                  <a>Help</a>
                 </li>
               </ul>
             </div>

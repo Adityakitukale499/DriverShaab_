@@ -47,11 +47,11 @@ const OurCustomer = () => {
                 draggable={false}
                 showDots={true}
                 responsive={responsive}
-                ssr={true} // means to render carousel on server-side.
+                ssr={true} 
                 infinite={true}
                 autoPlay={true}
-                autoPlaySpeed={3000}
-                transitionDuration={4000}
+                autoPlaySpeed={1000}
+                transitionDuration={1000}
                 customLeftArrow={<></>}
                 customRightArrow={<></>}
                 removeArrowOnDeviceType={["tablet", "mobile"]}
