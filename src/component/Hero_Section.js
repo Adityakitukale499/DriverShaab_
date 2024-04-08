@@ -42,16 +42,20 @@ const Hero_Section = () => {
 
   return (
     <div className="sec-hero" style={{ zIndex: -1 }} ref={scrollEffect}>
-      <div className={`sec-hero-text-container-text hero-animation`} style={{maxWidth:'1300px'}}>
+      <div
+        className={`sec-hero-text-container-text hero-animation`}
+        style={{ maxWidth: "1300px" }}
+      >
         <h1 className="sec-hero-heading">
           India's Premier Driver Service Network
         </h1>
 
         <p className="sec-hero-description">
-          DriverShaab is a cutting-edge driver service platform that provides
-          services to individual car owners and a wide range of partners.
-          Experience the difference with India's most extensive network of
-          driving professionals.
+          DriverShaab is a cutting-edge driver service platform that provide
+          services to different businesses/Logistics companies as well as
+          individual car owners with a wide range of Driver Partners. Experience
+          the difference with India's most extensive network of driving
+          professionals.
         </p>
       </div>
       <div className={`sec-hero-btn-div hero-animation`} style={{ zIndex: 0 }}>

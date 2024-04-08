@@ -26,10 +26,11 @@ const PrivacyPolicy = () => {
             mb: 3,
           }}
         >
-          We, Drivershaab/SATADRU TECHNOLOGIES PRIVATE LIMITED, (hereinafter
+          We,
+          DriverShaab/SATADRU TECHNOLOGIES PRIVATE LIMITED, (hereinafter
           referred to as “Private Limited Company””), having its registered
-          office at 23A Chandra Nath Roy Road, Tiljala , Kolkata-700039, India
-          the creators of this Privacy Policy ensure our firm commitment to your
+          office at 42/132/A,New Ballygunge Road, Kolkata,700039, India the
+          creators of this Privacy Policy ensure our firm commitment to your
           privacy vis-à-vis the protection of your priceless information. In
           order to endow you with our uninterrupted use of services, we may
           collect and, in some circumstances, disclose information about you. To
@@ -736,7 +737,7 @@ const PrivacyPolicy = () => {
           }}
         >
           If you have any questions or concerns regarding this privacy policy,
-          you should contact us by sending an e-mail to 
+          you should contact us by sending an e-mail to
           <a href="mailto:info@drivershaab.com"> info@drivershaab.com</a>..
         </Typography>
       </Box>

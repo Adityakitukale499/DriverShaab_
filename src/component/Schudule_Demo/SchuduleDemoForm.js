@@ -16,8 +16,11 @@ import { ref, set } from "firebase/database";
 import { db } from "../../firebase.config";
 import { useNavigate } from "react-router-dom";
 import * as EmailValidator from "email-validator";
+import { countrycode } from "../../App"; 
+import phone from "phone";
 
 const SchuduleDemoForm = () => {
+  
   const states = [
     "Andhra Pradesh",
     "Arunachal Pradesh",
@@ -63,6 +66,7 @@ const SchuduleDemoForm = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    ccode:'+91',
     contactNo: "",
     city: "",
     state: "",
@@ -83,7 +87,10 @@ const SchuduleDemoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!EmailValidator.validate(formData.email)) alert("email");
+    if (!phone(formData.ccode + formData.contactNo).isValid) {
+      alert('Enter Valid Number')
+      return;
+    }
     if (
       !formData.name &&
       EmailValidator.validate(formData.email) &&
@@ -179,23 +186,51 @@ const SchuduleDemoForm = () => {
                       },
                     }}
                   />
-
-                  <TextField
-                    label="Contact No."
-                    variant="outlined"
-                    required
-                    fullWidth
-                    type="number"
-                    name="contactNo"
-                    value={formData.contactNo}
-                    onChange={handleChange}
-                    sx={{
-                      "& .MuiFormLabel-root": { fontSize: "15px" },
-                      "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
-                        fontSize: "15px",
-                      },
-                    }}
-                  />
+                  <Box sx={{ display: "flex", gap: 0.5 }}>
+                    <FormControl sx={{ width: "20%" }}>
+                      <InputLabel
+                        id="demo-select-small-label3"
+                        sx={{ fontSize: "15px" }}
+                      >
+                        Country Code
+                      </InputLabel>
+                      <Select
+                        required
+                        labelId="demo-select-small-label3"
+                        id="demo-select-small3"
+                        value={formData.ccode}
+                        // fullWidth
+                        label="Country Code"
+                        name="ccode"
+                        onChange={handleChange}
+                        sx={{ fontSize: "15px" }}
+                      >
+                        {/* <MenuItem value={''}>{'state'}</MenuItem> */}
+                        {countrycode.map((code) => (
+                          <MenuItem key={code.code} value={code.code}>
+                            {code.code}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                    <TextField
+                      label="Contact No."
+                      variant="outlined"
+                      required
+                      fullWidth
+                      type="number"
+                      name="contactNo"
+                      value={formData.contactNo}
+                      onChange={handleChange}
+                      sx={{
+                        "& .MuiFormLabel-root": { fontSize: "15px" },
+                        "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root":
+                          {
+                            fontSize: "15px",
+                          },
+                      }}
+                    />
+                  </Box>
                   <FormControl>
                     <InputLabel
                       id="demo-select-small-label2"

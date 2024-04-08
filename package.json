@@ -16,6 +16,7 @@
     "email-validator": "^2.0.4",
     "firebase": "^10.9.0",
     "font-awesome": "^4.7.0",
+    "phone": "^3.1.42",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-html5video": "^2.5.1",

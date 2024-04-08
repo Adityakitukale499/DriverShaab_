@@ -1,24 +1,26 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
   Box,
   TextField,
-  Typography,
   Button,
-  Hidden,
   Grid,
   Select,
   MenuItem,
   InputLabel,
   FormControl,
+  Alert,
+  AlertTitle,
 } from "@mui/material";
-import { ScheduledemoContext } from "../App";
+import { countrycode } from "../App";
 import { ref, set } from "firebase/database";
 import { db } from "../firebase.config";
 import { useNavigate } from "react-router-dom";
+import { phone } from "phone";
 
 const Careers = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "smooth" });
+    console.log(phone("+917066994198").isValid);
   }, []);
 
   const states = [
@@ -57,6 +59,7 @@ const Careers = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
+    ccode: "+91",
     contactNo: "",
     city: "",
     state: "",
@@ -68,7 +71,8 @@ const Careers = () => {
     if (
       event.target.name == "contactNo" &&
       event.target.value.toString().length > 10
-    ) return
+    )
+      return;
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -77,6 +81,10 @@ const Careers = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!phone(formData.ccode + formData.contactNo).isValid) {
+      alert('Enter Valid Number')
+      return;
+    }
     if (!formData.name && !formData.email && !formData.contactNo) {
       return;
     }
@@ -89,6 +97,7 @@ const Careers = () => {
     setFormData({
       name: "",
       email: "",
+      ccode: "+91",
       contactNo: "",
       city: "",
       state: "",
@@ -139,7 +148,12 @@ const Careers = () => {
                   style={{ width: "100%" }}
                 >
                   <FormControl sx={{ fontSize: "15px" }}>
-                    <InputLabel id="demo-select-small-label1" sx={{fontSize:'15px'}}>Roles</InputLabel>
+                    <InputLabel
+                      id="demo-select-small-label1"
+                      sx={{ fontSize: "15px" }}
+                    >
+                      Roles
+                    </InputLabel>
                     <Select
                       labelId="demo-select-small-label1"
                       id="demo-select-small1"
@@ -197,24 +211,58 @@ const Careers = () => {
                     }}
                   />
 
-                  <TextField
-                    required
-                    type="number"
-                    label="Contact No."
-                    variant="outlined"
-                    fullWidth
-                    name="contactNo"
-                    value={formData.contactNo}
-                    onChange={handleChange}
-                    sx={{
-                      "& .MuiFormLabel-root": { fontSize: "15px" },
-                      "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
-                        fontSize: "15px",
-                      },
-                    }}
-                  />
+                  <Box sx={{ display: "flex", gap: 0.5 }}>
+                    <FormControl sx={{ width: "20%" }}>
+                      <InputLabel
+                        id="demo-select-small-label3"
+                        sx={{ fontSize: "15px" }}
+                      >
+                        Country Code
+                      </InputLabel>
+                      <Select
+                        required
+                        labelId="demo-select-small-label3"
+                        id="demo-select-small3"
+                        value={formData.ccode}
+                        // fullWidth
+                        label="Country Code"
+                        name="ccode"
+                        onChange={handleChange}
+                        sx={{ fontSize: "15px" }}
+                      >
+                        {/* <MenuItem value={''}>{'state'}</MenuItem> */}
+                        {countrycode.map((code) => (
+                          <MenuItem key={code.code} value={code.code}>
+                            {code.code}
+                          </MenuItem>
+                        ))}
+                      </Select>
+                    </FormControl>
+                    <TextField
+                      label="Contact No."
+                      variant="outlined"
+                      required
+                      fullWidth
+                      type="number"
+                      name="contactNo"
+                      value={formData.contactNo}
+                      onChange={handleChange}
+                      sx={{
+                        "& .MuiFormLabel-root": { fontSize: "15px" },
+                        "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root":
+                          {
+                            fontSize: "15px",
+                          },
+                      }}
+                    />
+                  </Box>
                   <FormControl>
-                    <InputLabel id="demo-select-small-label2" sx={{fontSize:'15px'}}>State</InputLabel>
+                    <InputLabel
+                      id="demo-select-small-label2"
+                      sx={{ fontSize: "15px" }}
+                    >
+                      State
+                    </InputLabel>
                     <Select
                       required
                       labelId="demo-select-small-label2"
