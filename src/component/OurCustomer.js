@@ -28,7 +28,8 @@ const responsive = {
 
 const OurCustomer = () => {
     return (
-        <Box sx={{ px: { lg: 17, md: 8, xs: 2 }, my: 5}}>
+        <Box sx={{ width:'100vw', display:'flex',justifyContent:'center'}}>
+        <Box sx={{ px: { lg: 1, md: 8, xs: 2 }, my: 5, width:'100%',maxWidth:'1300px'}}>
 
             <Typography
                 mb={2}
@@ -57,7 +58,7 @@ const OurCustomer = () => {
                 removeArrowOnDeviceType={["tablet", "mobile"]}
                 dotListClass="custom-dot-list-style"
                 itemClass="carousel-item-padding-40-px"
-                style={{width:'80vw', maxWidth: '1200px' }}
+                style={{width:'80vw', maxWidth: '1300px' }}
             >
                 <Card sx={{ width: 250 , mb:5, mx:'auto'}}>
                     <CardActionArea>
@@ -240,6 +241,7 @@ const OurCustomer = () => {
                     </CardActionArea>
                 </Card>
             </Carousel>
+        </Box>
         </Box>
     );
 };

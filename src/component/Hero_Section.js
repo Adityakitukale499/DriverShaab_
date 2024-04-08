@@ -42,7 +42,7 @@ const Hero_Section = () => {
 
   return (
     <div className="sec-hero" style={{ zIndex: -1 }} ref={scrollEffect}>
-      <div className={`sec-hero-text-container-text hero-animation`}>
+      <div className={`sec-hero-text-container-text hero-animation`} style={{maxWidth:'1300px'}}>
         <h1 className="sec-hero-heading">
           India's Premier Driver Service Network
         </h1>

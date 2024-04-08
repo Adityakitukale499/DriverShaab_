@@ -60,9 +60,9 @@ const App = () => {
       <AppBar
         position="fixed"
         className="app-bar"
-        style={{ background: "#121212", padding: "10px" }}
+        style={{ background: "#121212", padding: "10px", width:'100vw',display:"flex" , justifyContent:'center', alignItems:"center"}}
       >
-        <Toolbar >
+        <Toolbar sx={{width:{lg:'1300px',md:'100%', xs:'100%'},maxWidth:'1300px'}} >
           <Box sx={{ display: "flex", flexDirection: "row", flexGrow: 1 }}>
             <img src="logodr.png" alt="img" style={{ height: '65px' }} onClick={() => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
