@@ -163,7 +163,7 @@ const SchuduleDemoForm = () => {
                     onChange={handleChange}
                     variant="outlined"
                     fullWidth
-                    sx={{
+                    sx={{fontSize: "15px",
                       "& .MuiFormLabel-root": { fontSize: "15px" },
                       "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
                         fontSize: "15px",
@@ -180,7 +180,7 @@ const SchuduleDemoForm = () => {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    sx={{
+                    sx={{fontSize: "15px",
                       "& .MuiFormLabel-root": { fontSize: "15px" },
                       "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
                         fontSize: "15px",
@@ -223,7 +223,7 @@ const SchuduleDemoForm = () => {
                       name="contactNo"
                       value={formData.contactNo}
                       onChange={handleChange}
-                      sx={{
+                      sx={{fontSize: "15px",
                         "& .MuiFormLabel-root": { fontSize: "15px" },
                         "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root":
                           {
@@ -266,7 +266,7 @@ const SchuduleDemoForm = () => {
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    sx={{
+                    sx={{fontSize: "15px",
                       "& .MuiFormLabel-root": { fontSize: "15px" },
                       "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
                         fontSize: "15px",
@@ -284,7 +284,7 @@ const SchuduleDemoForm = () => {
                     name="additionalInfo"
                     value={formData.additionalInfo}
                     onChange={handleChange}
-                    sx={{
+                    sx={{fontSize: "15px",
                       "& .MuiFormLabel-root": { fontSize: "15px" },
                       "& .css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root": {
                         fontSize: "15px",
