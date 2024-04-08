@@ -39,7 +39,7 @@ const TermAndCondition = () => {
         >
           <b>
             {" "}
-            “<a href="http://www.drivershaab.com/">www.drivershaab.com</a>”
+            “<a href="https://drivershaab.in/">www.drivershaab.in</a>”
           </b>{" "}
           (hereinafter, the “Website/App”) is owned and operated by SATADRU
           TECHNOLOGIES PRIVATE LIMITED, (hereinafter referred to as
