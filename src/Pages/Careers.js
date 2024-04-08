@@ -82,7 +82,7 @@ const Careers = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!phone(formData.ccode + formData.contactNo).isValid) {
-      alert('Enter Valid Number')
+      alert('Enter Valid Contact Number.')
       return;
     }
     if (!formData.name && !formData.email && !formData.contactNo) {

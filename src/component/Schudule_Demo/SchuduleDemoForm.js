@@ -88,7 +88,7 @@ const SchuduleDemoForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!phone(formData.ccode + formData.contactNo).isValid) {
-      alert('Enter Valid Number')
+      alert('Enter Valid Contact Number.')
       return;
     }
     if (
@@ -107,6 +107,7 @@ const SchuduleDemoForm = () => {
     setFormData({
       name: "",
       email: "",
+      ccode:'+91',
       contactNo: "",
       city: "",
       state: "",
