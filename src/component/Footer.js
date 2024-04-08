@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
 import "../Assets/css/style.css";
 import "../Assets/css/color.css";
 import { Box } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import { ScheduledemoContext } from "../App";
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -71,21 +72,27 @@ const Footer = () => {
                         </li>
                         <li>
                           <a onClick={() => {
-                            navigate("/contactus");
+                            navigate("/careers");
                             window.scrollTo({ top: 0, behavior: 'smooth' })
-                          }}>Meet the Team</a>
-                        </li>
-                        <li>
-                          <a onClick={() => {
-                            navigate("/contactus");
-                            window.scrollTo({ top: 0, behavior: 'smooth' })
-                          }}>Contact</a>
+                          }}>Careers</a>
                         </li>
                         <li>
                           <a onClick={() => {
                             navigate("/inidividual");
                             window.scrollTo({ top: 0, behavior: 'smooth' })
-                          }}>Services</a>
+                          }}>For Individuals</a>
+                        </li>
+                        <li>
+                          <a onClick={() => {
+                            navigate("/businesses");
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                          }}>For Businesses</a>
+                        </li>
+                        <li>
+                          <a onClick={() => {
+                            navigate("/contactus");
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                          }}>Contact Us</a>
                         </li>
                       </ul>
                     </div>
@@ -151,17 +158,26 @@ const Footer = () => {
             <div className="footer-menu">
               <ul>
                 <li>
-                  <a>Terms & Condition</a>
+                  <a onClick={() => {
+                            navigate("/termandcondition");
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                          }}>Terms & Condition</a>
                 </li>
                 <li>
-                  <a>Refund Policy</a>
+                  <a onClick={() => {
+                            navigate("/refundpolicy");
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                          }}> Refund Policy</a>
                 </li>
                 <li>
-                  <a>Privacy Policy</a>
+                  <a onClick={() => {
+                            navigate("/privacypolicy");
+                            window.scrollTo({ top: 0, behavior: 'smooth' })
+                          }}>Privacy Policy</a>
                 </li>
-                <li>
+                {/* <li>
                   <a>Help</a>
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

@@ -20,6 +20,9 @@ import { createContext, useEffect, useRef, useState } from "react";
 import SubmitedQuery from "./component/SubmitedQuery";
 import { db } from "./firebase.config";
 import UsersQuery from "./component/UserQuery";
+import TermAndCondition from "./component/policyPages/TermAndCondition";
+import RefundPolicy from "./component/policyPages/RefundPolicy";
+import PrivacyPolicy from "./component/policyPages/PrivacyPolicy";
 
 export const ScheduledemoContext = createContext()
 
@@ -51,6 +54,10 @@ const App = () => {
               <Route path="/scheduledemo" element={<ScheduleDemo />} />
               <Route path="/querysubmit" element={<SubmitedQuery />} />
               <Route path="/querys" element={<UsersQuery />} />
+              {/* polycy pages */}
+              <Route path="/termandcondition" element={<TermAndCondition />} />
+              <Route path="/refundpolicy" element={<RefundPolicy />} />
+              <Route path="/privacypolicy" element={<PrivacyPolicy />} />
             </Routes>
             {location.pathname != '/querysubmit' && <Footer />}
           </div>}

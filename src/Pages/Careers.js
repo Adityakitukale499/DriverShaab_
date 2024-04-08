@@ -65,6 +65,10 @@ const Careers = () => {
   });
 
   const handleChange = (event) => {
+    if (
+      event.target.name == "contactNo" &&
+      event.target.value.toString().length > 10
+    ) return
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -178,6 +182,7 @@ const Careers = () => {
 
                   <TextField
                     required
+                    type="email"
                     label="Email"
                     variant="outlined"
                     fullWidth
@@ -194,6 +199,7 @@ const Careers = () => {
 
                   <TextField
                     required
+                    type="number"
                     label="Contact No."
                     variant="outlined"
                     fullWidth

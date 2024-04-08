@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
 import "../Assets/css/style.css";
 import "../Assets/css/bootstrap.css";
 import "../Assets/css/responsive.css";
@@ -8,6 +8,8 @@ import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import Tooltip from '@mui/material/Tooltip';
+import { useNavigate } from "react-router-dom";
+import { ScheduledemoContext } from "../App";
 
 // function isMobileDevice() {
 //   return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
@@ -15,6 +17,17 @@ import Tooltip from '@mui/material/Tooltip';
 //   );
 // }
 const TeamSection = () => {
+  const navigate = useNavigate()
+  const { scheduledemo, setScheduledemo } = useContext(ScheduledemoContext)
+  useEffect(() => {
+    if (scheduledemo) {
+      document.getElementById("ourteam").scrollIntoView();
+      window.scrollBy(0, -85);
+      setScheduledemo(false);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, []);
   return (
     <div style={{ position: "relative" }}>
       <div
@@ -32,7 +45,7 @@ const TeamSection = () => {
           style={{ zIndex: 2 }}
         >
           <div className="auto-container">
-            <div className="sec-title text-center">
+            <div className="sec-title text-center" id="ourteam">
               <h2>Meet Our Experts</h2>
               {/* <div className="image-container text-center">
 

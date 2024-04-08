@@ -1,33 +1,80 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { Box, TextField, Typography, Button, Hidden, Grid } from "@mui/material";
-import { ScheduledemoContext } from '../../App';
-import { ref, set } from 'firebase/database';
-import { db } from '../../firebase.config';
-import { useNavigate } from 'react-router-dom';
-
+import React, { useContext, useEffect, useState } from "react";
+import {
+  Box,
+  TextField,
+  Typography,
+  Button,
+  Hidden,
+  Grid,
+  FormControl,
+  InputLabel,
+  Select,
+  MenuItem,
+} from "@mui/material";
+import { ScheduledemoContext } from "../../App";
+import { ref, set } from "firebase/database";
+import { db } from "../../firebase.config";
+import { useNavigate } from "react-router-dom";
+import * as EmailValidator from "email-validator";
 
 const SchuduleDemoForm = () => {
-  const { scheduledemo, setScheduledemo } = useContext(ScheduledemoContext)
-  const navigate = useNavigate()
+  const states = [
+    "Andhra Pradesh",
+    "Arunachal Pradesh",
+    "Assam",
+    "Bihar",
+    "Chhattisgarh",
+    "Goa",
+    "Gujarat",
+    "Haryana",
+    "Himachal Pradesh",
+    "Jharkhand",
+    "Karnataka",
+    "Kerala",
+    "Madhya Pradesh",
+    "Maharashtra",
+    "Manipur",
+    "Meghalaya",
+    "Mizoram",
+    "Nagaland",
+    "Odisha",
+    "Punjab",
+    "Rajasthan",
+    "Sikkim",
+    "Tamil Nadu",
+    "Telangana",
+    "Tripura",
+    "Uttar Pradesh",
+    "Uttarakhand",
+    "West Bengal",
+  ];
+  const { scheduledemo, setScheduledemo } = useContext(ScheduledemoContext);
+  const navigate = useNavigate();
   useEffect(() => {
     if (scheduledemo) {
       document.getElementById("scheduledemo").scrollIntoView();
       window.scrollBy(0, -80);
-      setScheduledemo(false)
-    }else{
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+      setScheduledemo(false);
+    } else {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [])
+  }, []);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     contactNo: "",
     city: "",
+    state: "",
     additionalInfo: "",
   });
 
   const handleChange = (event) => {
+    if (
+      event.target.name == "contactNo" &&
+      event.target.value.toString().length > 10
+    )
+      return;
     setFormData({
       ...formData,
       [event.target.name]: event.target.value,
@@ -36,97 +83,183 @@ const SchuduleDemoForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (!formData.name && !formData.email && !formData.contactNo) {
+    if (!EmailValidator.validate(formData.email)) alert("email");
+    if (
+      !formData.name &&
+      EmailValidator.validate(formData.email) &&
+      !formData.contactNo
+    ) {
       return;
     }
-    const id = Date.now()
-    const useref = ref(db, 'DemoRequests/' + id)
+    const id = Date.now();
+    const useref = ref(db, "DemoRequests/" + id);
     set(useref, {
       ...formData,
       timeStamp: new Date().toLocaleString(),
-    })
+    });
     setFormData({
       name: "",
       email: "",
       contactNo: "",
       city: "",
-      additionalInfo: '',
-    })
-    navigate('/querysubmit')
+      state: "",
+      additionalInfo: "",
+    });
+    navigate("/querysubmit");
   };
 
   return (
-    <Box display={'flex'} justifyContent={'center'} mt={2} id='scheduledemo'>
-      <Grid container maxWidth={'1200px'}>
-        <Grid item lg={12} md={12} xs={12} display={'flex'} justifyContent={{ lg: 'end', xs: 'center' }} alignItems={'center'}>
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginTop: "30px", width: '90vw', maxWidth: "500px" }}>
+    <Box display={"flex"} justifyContent={"center"} mt={2} id="scheduledemo">
+      <Grid container maxWidth={"1200px"}>
+        <Grid
+          item
+          lg={12}
+          md={12}
+          xs={12}
+          display={"flex"}
+          justifyContent={{ lg: "end", xs: "center" }}
+          alignItems={"center"}
+        >
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "30px",
+              width: "90vw",
+              maxWidth: "500px",
+            }}
+          >
             <div className="joinasdriver_form_container">
               <div className="joinasdriver_heading">
-                <p className="join-as-driver-heading">Schedule a demo with us</p>
+                <p className="join-as-driver-heading">
+                  Schedule a demo with us
+                </p>
                 <p className="join-as-driver-sub-heading">
-                  A At DriverShaab, we provide PAN India level B2B services To corporate
-                  and logistics companies.
+                  A At DriverShaab, we provide PAN India level B2B services To
+                  corporate and logistics companies.
                 </p>
               </div>
 
-              <div className="joinasdriver_form" >
-                <form onSubmit={handleSubmit} className="scheduledemo_form" style={{ width: '100%' }}>
+              <div className="joinasdriver_form">
+                <form
+                  onSubmit={handleSubmit}
+                  className="scheduledemo_form"
+                  style={{ width: "100%" }}
+                >
                   <TextField
                     label="Name"
+                    required
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
                     variant="outlined"
                     fullWidth
-                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
+                    sx={{
+                      "& .MuiFormLabel-root": { fontSize: "15px" },
+                      "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
+                        fontSize: "15px",
+                      },
+                    }}
                   />
 
                   <TextField
                     label="Email"
                     variant="outlined"
+                    required
                     fullWidth
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
+                    sx={{
+                      "& .MuiFormLabel-root": { fontSize: "15px" },
+                      "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
+                        fontSize: "15px",
+                      },
+                    }}
                   />
 
                   <TextField
                     label="Contact No."
                     variant="outlined"
+                    required
                     fullWidth
+                    type="number"
                     name="contactNo"
                     value={formData.contactNo}
                     onChange={handleChange}
-                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
+                    sx={{
+                      "& .MuiFormLabel-root": { fontSize: "15px" },
+                      "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
+                        fontSize: "15px",
+                      },
+                    }}
                   />
-
+                  <FormControl>
+                    <InputLabel
+                      id="demo-select-small-label2"
+                      sx={{ fontSize: "15px" }}
+                    >
+                      State
+                    </InputLabel>
+                    <Select
+                      required
+                      labelId="demo-select-small-label2"
+                      id="demo-select-small2"
+                      value={formData.state}
+                      fullWidth
+                      label="State"
+                      name="state"
+                      onChange={handleChange}
+                      sx={{ fontSize: "15px" }}
+                    >
+                      {/* <MenuItem value={''}>{'state'}</MenuItem> */}
+                      {states.map((state) => (
+                        <MenuItem key={state} value={state}>
+                          {state}
+                        </MenuItem>
+                      ))}
+                    </Select>
+                  </FormControl>
                   <TextField
                     label="City"
                     variant="outlined"
+                    required
                     fullWidth
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
-                    sx={{'& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
+                    sx={{
+                      "& .MuiFormLabel-root": { fontSize: "15px" },
+                      "& .css-md26zr-MuiInputBase-root-MuiOutlinedInput-root": {
+                        fontSize: "15px",
+                      },
+                    }}
                   />
 
                   <TextField
                     label="your message..."
                     variant="outlined"
+                    required
                     fullWidth
                     multiline
                     rows={4}
                     name="additionalInfo"
                     value={formData.additionalInfo}
                     onChange={handleChange}
-                    sx={{'& .css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root':{fontSize:'15px'}}}
+                    sx={{
+                      "& .MuiFormLabel-root": { fontSize: "15px" },
+                      "& .css-8ewcdo-MuiInputBase-root-MuiOutlinedInput-root": {
+                        fontSize: "15px",
+                      },
+                    }}
                   />
                   <Button
                     type="submit"
                     variant="contained"
                     className="join-as-driver-btn"
-                    sx={{fontSize:"15px", textTransform:'none'}}
+                    sx={{ fontSize: "15px", textTransform: "none" }}
                   >
                     Schedule Demo
                   </Button>
@@ -137,12 +270,7 @@ const SchuduleDemoForm = () => {
         </Grid>
       </Grid>
     </Box>
-  )
-}
+  );
+};
 
-export default SchuduleDemoForm
-
-
-
-
-
+export default SchuduleDemoForm;
