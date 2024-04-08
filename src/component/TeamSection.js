@@ -55,7 +55,7 @@ const TeamSection = () => {
               {teamMembers.map((member, index) => (
                 <div
                   key={index}
-                  className={`col-lg-2 col-md-6 col-xs-6 team-block-one colno${index}`}
+                  className={`col-lg-2 col-md-4 col-xs-6 team-block-one `}
                 >
                   <div className="frame">
                     <div className="inner-box">
@@ -64,7 +64,7 @@ const TeamSection = () => {
                         <img
                           src={member.imageSrc}
                           alt={member.name}
-                          style={{ width: "100%" }}
+                          // style={{ width: "100%" }}
                         />
                       </div>
                       <div className="lower-content">
@@ -112,6 +112,22 @@ const TeamSection = () => {
 };
 
 const teamMembers = [
+  {
+    name: "Arunesh Beri",
+    designation: "CTO",
+    imageSrc: "aruneshberi.jpeg",
+    socialLinks: [
+      {
+        url: "https://www.linkedin.com/in/arunesh-beri/",
+        icon: "LinkedInIcon",
+      },
+      {
+        url:  "mailto:arunesh.beri@drivershaab.com",
+        icon: "MailOutlineIcon",
+      },
+      // { url: '#', icon: 'FacebookIcon'},
+    ],
+  },
   {
     name: "Neha Shaikh",
     designation: "Head of Procurement",
