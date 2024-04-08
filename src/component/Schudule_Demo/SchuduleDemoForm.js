@@ -188,7 +188,7 @@ const SchuduleDemoForm = () => {
                     }}
                   />
                   <Box sx={{ display: "flex", gap: 0.5 }}>
-                    <FormControl sx={{ width: "20%" }}>
+                    <FormControl sx={{ width: "30%" }}>
                       <InputLabel
                         id="demo-select-small-label3"
                         sx={{ fontSize: "15px" }}
